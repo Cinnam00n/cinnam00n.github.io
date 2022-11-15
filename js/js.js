@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
       body.classList.add("overflow-hidden");
     } else  if( data == 'menu'){
       body.classList.add("menu-expanded");
-    }{
+    }else{
       body.classList.remove("overflow-hidden");
       body.classList.remove("menu-expanded");
     }
@@ -118,6 +118,38 @@ document.addEventListener("DOMContentLoaded", () => {
       zapisanePanel.classList.remove("active");
       bodyOverflow();
     });
+  });
+
+  const 
+        bibliogr_container = document.getElementById("block-bibliografia"),
+        bibliogr_button_open = document.querySelector("#block-bibliografia button.article-footer_expand"),
+        bibliogr_button_close = document.querySelector("#block-bibliografia button.article-footer_close"),
+        autorzy_container = document.getElementById("block-autorzy"),
+        autorzy_button_open = document.querySelector("#block-autorzy button.article-footer_expand"),
+        autorzy_button_close = document.querySelector("#block-autorzy button.article-footer_close");
+
+  bibliogr_button_open.addEventListener('click', function expand_artfoot(event) {   
+    bibliogr_container.classList.add('expanded');
+    bibliogr_button_open.classList.toggle('hidden');
+    bibliogr_button_close.classList.toggle('hidden');
+  });
+      
+  bibliogr_button_close.addEventListener('click', function expand_artfoot(event) {   
+    bibliogr_container.classList.remove('expanded');
+    bibliogr_button_open.classList.toggle('hidden');
+    bibliogr_button_close.classList.toggle('hidden');
+  });
+
+  autorzy_button_open.addEventListener('click', function expand_artfoot(event) {   
+    autorzy_container.classList.add('expanded');
+    autorzy_button_open.classList.toggle('hidden');
+    autorzy_button_close.classList.toggle('hidden');
+  });
+     
+  autorzy_button_close.addEventListener('click', function expand_artfoot(event) {   
+    autorzy_container.classList.remove('expanded');
+    autorzy_button_open.classList.toggle('hidden');
+    autorzy_button_close.classList.toggle('hidden');
   });
       
 });
