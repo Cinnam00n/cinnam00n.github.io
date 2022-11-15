@@ -23,8 +23,11 @@ document.addEventListener("DOMContentLoaded", () => {
   function bodyOverflow(data){
     if( data == 'add'){
       body.classList.add("overflow-hidden");
-    } else{
+    } else  if( data == 'menu'){
+      body.classList.add("menu-expanded");
+    }{
       body.classList.remove("overflow-hidden");
+      body.classList.remove("menu-expanded");
     }
   }
 
@@ -70,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
           menuIte.classList.remove("current"); 
         });
         menuItem.classList.add("current");
-        bodyOverflow('add');
+        bodyOverflow('menu');
         const sub = findIdOfParent(menuItem),
               submenu = document.getElementById("desktop-menu").getElementsByClassName(sub)[0];
             submenu.classList.add("active");

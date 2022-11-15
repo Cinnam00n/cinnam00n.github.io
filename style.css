@@ -288,10 +288,10 @@ img.menu-arrow {
 .current img.menu-arrow{
     transform: rotate(-180deg);
 }
-.overflow-hidden .main-menu a {
+.menu-expanded .main-menu a {
     color: var(--primarycolor);
 }
-.overflow-hidden .main-menu img {
+.menu-expanded .main-menu img {
     filter: invert(95%) sepia(9%) saturate(357%) hue-rotate(48deg) brightness(87%) contrast(92%);
 }
 #desktop-menu:hover .main-menu a,
@@ -304,7 +304,7 @@ img.menu-arrow {
 .sub-menu a.current{
     color: var(--primaryvarcolor)!important;
 }
-.current img.menu-arrow,
+#desktop-menu .main-menu .current img.menu-arrow,
 #desktop-menu .main-menu a:hover img.menu-arrow{
     filter: invert(27%) sepia(87%) saturate(352%) hue-rotate(100deg) brightness(96%) contrast(86%);
 }
