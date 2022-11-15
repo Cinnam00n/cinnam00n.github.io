@@ -475,6 +475,10 @@ a.menu-item:hover img.menu-arrow {
 #mobile-menu .sub-menu{
     height: 100%;
 }
+#mobile-menu  .sub-menu li a{
+    font-size: 1rem;
+    font-weight: 300;
+}
 #sub-mobile-menu-header{
     display: block;
     margin-left: 0;
@@ -548,6 +552,16 @@ a.menu-item:hover img.menu-arrow {
     text-align: left;
     width: fit-content;
     margin-left: 25%;
+}
+.sub-menu-title{
+    font-size: 1,25rem;
+    font-weight: 500;
+    margin-left: calc(25% + 0.8rem);
+    text-align: left;
+}
+#mobile-menu .sub-menu li:hover a, 
+#mobile-menu .sub-menu li:active a {
+    margin-left: 0.8rem!important;
 }
 /* ZAPISANE ARTYKULY */
 #zapisane-artykuly-panel{
