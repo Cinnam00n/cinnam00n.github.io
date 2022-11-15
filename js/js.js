@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
       mobileSubMenuItems = document.querySelectorAll(".mobile-sub-menu-items"),
       mobileSubMenuBack = document.querySelectorAll(".mobile-menu-back > img");
 
-  const naniStrip = document.getElementById("navi-strip"),
+  const naviStrip = document.getElementById("navi-strip"),
         body = document.body;
 
   function bodyOverflow(data){
@@ -60,14 +60,8 @@ document.addEventListener("DOMContentLoaded", () => {
     menuItem.addEventListener('click', function handleClick(event) { 
       subItems.forEach(subItem => {
           subItem.classList.remove("active");
+          bodyOverflow();
       });
-
-    /*  if ( menuItem.parentElement.id == "zwiedzaj" ) { 
-        header.classList.toggle("zwiedzaj-expanded");
-      }else{
-        header.classList.remove("zwiedzaj-expanded");
-      }
-      */
 
       if ( menuItem.classList.contains("current") ) { 
         menuItem.classList.remove("current");
@@ -76,6 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
           menuIte.classList.remove("current"); 
         });
         menuItem.classList.add("current");
+        bodyOverflow('add');
         const sub = findIdOfParent(menuItem),
               submenu = document.getElementById("desktop-menu").getElementsByClassName(sub)[0];
             submenu.classList.add("active");

@@ -213,22 +213,6 @@ input:active {
     align-items: center;
     margin: auto;
 }
-#navi-strip.zwiedzaj-expanded {
-    color:  var(--primarycolor);
-}
-.zwiedzaj-expanded a.menu-item{
-    color: var(--primarycolor);
-}
-.zwiedzaj-expanded a.menu-item.current,
-.zwiedzaj-expanded a.menu-item:hover{
-    color: #FCFAF5!important;
-}
-.zwiedzaj-expanded img.logo,
-.zwiedzaj-expanded .search-block img,
-.zwiedzaj-expanded img.menu-arrow,
-.zwiedzaj-expanded .book img {
-    filter: invert(1) sepia(0%) saturate(0%) hue-rotate(180deg) brightness(200%) contrast(100%);
-}
 .second-menu {
     display: flex;
     align-items: center;
@@ -294,19 +278,35 @@ nav.main-menu {
     width: 0.6em;
     margin-left: 8px;
 }
-.menu-item.current{
-    color: var(--primarycolor);
-}
 img.menu-arrow {
     filter: invert(27%) sepia(87%) saturate(352%) hue-rotate(100deg) brightness(96%) contrast(86%);
-    transition: transform 0.3s ease;
+    transition: filter 0.3s ease;
 }
-.current img.menu-arrow,
-a.menu-item:hover img.menu-arrow {
+#desktop-menu:hover img.menu-arrow{
     filter: invert(95%) sepia(9%) saturate(357%) hue-rotate(48deg) brightness(87%) contrast(92%);
 }
 .current img.menu-arrow{
     transform: rotate(-180deg);
+}
+.overflow-hidden .main-menu a {
+    color: var(--primarycolor);
+}
+.overflow-hidden .main-menu img {
+    filter: invert(95%) sepia(9%) saturate(357%) hue-rotate(48deg) brightness(87%) contrast(92%);
+}
+#desktop-menu:hover .main-menu a,
+#desktop-menu:hover .second-menu a{
+    color: var(--primarycolor);
+}
+.menu-item.current,
+#desktop-menu .main-menu a:hover,
+#desktop-menu .second-menu a:hover,
+.sub-menu a.current{
+    color: var(--primaryvarcolor)!important;
+}
+.current img.menu-arrow,
+#desktop-menu .main-menu a:hover img.menu-arrow{
+    filter: invert(27%) sepia(87%) saturate(352%) hue-rotate(100deg) brightness(96%) contrast(86%);
 }
 .sub-menu{
     background-color: var(--backgroundcolor);
@@ -393,7 +393,6 @@ a.menu-item:hover img.menu-arrow {
 .sub-menu li:active a, 
 .sub-menu li:focus a, 
 .sub-menu li:focus-visible a, 
-.sub-menu a.current,
 .button-border{
     color: var(--primaryvarcolor);
     font-weight: 500;
@@ -559,10 +558,12 @@ a.menu-item:hover img.menu-arrow {
     margin-left: calc(25% + 0.8rem);
     text-align: left;
 }
-#mobile-menu .sub-menu li:hover a, 
-#mobile-menu .sub-menu li:active a {
+.sub-menu li:hover a, 
+.sub-menu li:active a {
     margin-left: 0.8rem!important;
+    margin-right: -0.8rem;
 }
+
 /* ZAPISANE ARTYKULY */
 #zapisane-artykuly-panel{
     display: flex;
@@ -695,8 +696,10 @@ a:hover .style-underline,
 button.usun:hover .style-underline{
     transform: translate3d(-101%, 0px, 0px);
 }
-.menu-foter a:hover .style-underline{
+.menu-foter .style-underline{
     background-color: var(--body3);
+}
+.menu-foter a:hover .style-underline{
     transform: translate3d(0%, 0px, 0px);
 }
 
