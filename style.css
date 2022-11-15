@@ -332,13 +332,13 @@ a.menu-item:hover img.menu-arrow {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    align-items: flex-start;
-    align-content: flex-start;
     justify-content: center;
     height: 20rem;
     max-height: 60%;
     width: 100%;
     gap: 0 1em;
+    align-items: flex-start;
+    align-content: flex-start;
 }
 #navi-strip .ziolana div.three-columns.container {
     display: flex;
@@ -387,6 +387,7 @@ a.menu-item:hover img.menu-arrow {
     font-weight: 500;
     line-height: 2;
     border-radius: 3em;
+    text-transform: lowercase;
 }
 .sub-menu li:hover a, 
 .sub-menu li:active a, 
@@ -438,10 +439,17 @@ a.menu-item:hover img.menu-arrow {
 }
 .menu-foter {
     margin-top: 2rem;
+    width: fit-content;
+    text-align: center;
+    align-self: center;
+    justify-self: center;
+    display: inline-flex;
 }
 .menu-foter a{
     color: var(--body3);
-    text-decoration: underline;
+    width: fit-content;
+    overflow: hidden;
+    padding-bottom: 4px;
 }
 #mobile-menu .mobile-menu-right{
     display: flex;
@@ -463,6 +471,9 @@ a.menu-item:hover img.menu-arrow {
 }
 #mobile-menu .button-border{
     padding: 8px;
+}
+#mobile-menu .sub-menu{
+    height: 100%;
 }
 #sub-mobile-menu-header{
     display: block;
@@ -534,8 +545,9 @@ a.menu-item:hover img.menu-arrow {
     height: auto;
 }
 .mobile-sub-menu-items ul li{
-    text-align: center;
-    width: 100%;
+    text-align: left;
+    width: fit-content;
+    margin-left: 25%;
 }
 /* ZAPISANE ARTYKULY */
 #zapisane-artykuly-panel{
@@ -564,6 +576,7 @@ a.menu-item:hover img.menu-arrow {
 .zapisane-art-open,
 .overflow-hidden{
     overflow: hidden;
+    position: fixed;
 }
 .zapisane-header {
     display: flex;
@@ -632,7 +645,7 @@ a.menu-item:hover img.menu-arrow {
 .zapisane-close{
     position: absolute;
     top: 2em;
-    right: 0.5em;
+    right: 2rem;
     cursor: pointer;
     transition: transform 0.2s ease;
 }
@@ -661,6 +674,16 @@ button:hover .style-underline{
 a:hover .style-underline,
 .article-spis_lista li.active .style-underline{
     transform: translate3d(8%, 0px, 0px);
+}
+.usun .style-underline {
+    transform: translate3d(0%, 0px, 0px);
+}
+button.usun:hover .style-underline{
+    transform: translate3d(-101%, 0px, 0px);
+}
+.menu-foter a:hover .style-underline{
+    background-color: var(--body3);
+    transform: translate3d(0%, 0px, 0px);
 }
 
 /*
@@ -872,7 +895,7 @@ ol {
         background-position: 87% 68%;
         background-repeat: no-repeat;
         width: calc(100vw - 4em);
-        max-height: calc(100vh - 10rem);
+        max-height: fit-content;
         padding: 6rem 2rem 4rem;
     }
     .sub-menu.zwiedzaj {
