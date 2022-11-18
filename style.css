@@ -101,6 +101,7 @@ button {
     font-weight: 400;
     font-family: "Signika", sans-serif;
     font-size: 20px;
+    white-space: nowrap;
 }
 p{
     font-family: 'Figtree', sans-serif;
@@ -206,13 +207,18 @@ input:active {
     transition: background-color 0.1s ease-in-out;
 }
 #navi-strip .container{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 90px 1fr 1fr 40px;
+    margin: auto;
+}
+#navi-strip #mobile-menu.container {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     align-content: center;
     justify-content: space-between;
     align-items: center;
-    margin: auto;
 }
 .second-menu {
     display: flex;
@@ -251,16 +257,15 @@ input:active {
 .searchbar input[type="text"] {
     font-size: 0.7em;
     line-height: 2rem;
-    width: 9em;
     border: none;
     border-bottom: 1px solid #B5B3B0;
     text-align: center;
 }
 nav.main-menu {
-    display: flex;
+    display: inline-flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    align-items: flex-end;
+    align-items: center;
     align-content: center;
     height: auto;
     transition: all 0.4s ease;
@@ -283,7 +288,7 @@ img.menu-arrow {
     filter: invert(27%) sepia(87%) saturate(352%) hue-rotate(100deg) brightness(96%) contrast(86%);
     transition: filter 0.3s ease;
 }
-#desktop-menu:hover img.menu-arrow{
+#desktop-menu .main-menu:hover img.menu-arrow{
     filter: invert(95%) sepia(9%) saturate(357%) hue-rotate(48deg) brightness(87%) contrast(92%);
 }
 .current img.menu-arrow{
@@ -293,10 +298,10 @@ img.menu-arrow {
     color: var(--primarycolor);
 }
 .menu-expanded .main-menu img {
-    filter: invert(95%) sepia(9%) saturate(357%) hue-rotate(48deg) brightness(87%) contrast(92%);
+    filter: invert(0) sepia(0) saturate(100%) hue-rotate(48deg) brightness(150%) contrast(70%);
 }
-#desktop-menu:hover .main-menu a,
-#desktop-menu:hover .second-menu a{
+#desktop-menu .main-menu:hover a,
+#desktop-menu .main-menu:hover .second-menu a{
     color: var(--primarycolor);
 }
 .menu-item.current,
@@ -389,6 +394,7 @@ img.menu-arrow {
     line-height: 2;
     border-radius: 3em;
     text-transform: lowercase;
+    white-space: nowrap;
 }
 .sub-menu li:hover a, 
 .sub-menu li:active a, 
@@ -731,9 +737,11 @@ button.usun:hover .style-underline{
     margin-bottom: 1.8rem;
 }
 .artgrid-ksiazka{
-    width: 19px;
-    height: 19px;
+    min-width: 22px;
+    width: 22px;
+    height: 22px;
     margin-bottom: 0;
+    margin-left: 0.5rem;
     background-size: contain;
 }
 
@@ -752,17 +760,29 @@ p.article-zajawka{
     margin-bottom: 2rem;
     max-width: 300px;
 }
-.tag-item{
+.tag-item,
+.tag_button{
     font-size: 0.7rem;
     color: var(--primaryvarcolor);
     border: 1px solid var(--primaryvarcolor);
     border-radius: 2em;
     padding: 0.5em 1em;
     line-height: 3;
+    line-break: strict;
+    white-space: nowrap;
 }
-.tag-item:hover{
+.tag_button{
+    line-height: 1;
+}
+.tag-item:hover,
+.tag_button:hover,
+.tag_button.active{
     background-color: var(--primarycolor);
     color: var(--primaryvarcolor);
+}
+.tag_button.active::before{
+    content: "x";
+    margin-right: 0.4em;
 }
 .article-spis h3{
     font-family: 'Figtree', sans-serif;
@@ -1034,15 +1054,15 @@ article.artgrid-item{
 }
 .masonry-content {
     overflow: hidden;
-    padding-bottom: 16px;
+    padding: 0 5px 16px 5px;
 }
 .artgrid-header {
     display: inline-flex;
     align-content: center;
-    justify-content: space-between;
     align-items: center;
     flex-direction: row;
     flex-wrap: nowrap;
+    justify-content: space-between;
 }
 .artgrid-img_cont img {
     width: 100%;
@@ -1076,9 +1096,28 @@ article.artgrid-item{
     #mobile-menu{
         display: none!important;
     }
-    .book {
-        margin-top: 0.8em;
-        margin-left: 1em;
+    nav.main-menu a{
+        font-size: 13px;
+    }
+    nav.main-menu {
+        align-self: center;
+        justify-self: end;}
+    
+    #desktop-menu a {
+        margin: 0;
+    }
+    #desktop-menu nav.main-menu {
+    margin-right: 4em;
+    }
+    #desktop-menu nav a.menu-item{
+        margin-right: 2rem;
+    }
+    #desktop-menu nav > a.menu-item{
+        margin-right: 0;
+    }
+    #desktop-menu a.book {
+        margin-top: 0.6em;
+        margin-left: 0em;
     }
     .sub-menu {
         background-image: url(img/ziolo-sub-menu.svg);
@@ -1133,16 +1172,16 @@ article.artgrid-item{
         margin-left: 2em;
         padding: 1em 1em 1em 0;
     }
+    .searchbar{
+        width: 260px;
+        justify-self: end;
+    }
+    .searchbar input[type="text"] {
+        width: 100%;
+    }
 }
 
 @media screen and (min-width: 1024px) {
-    .menu-item{
-        margin-right: 2em;
-    }
-    #zwiedzaj a.menu-item {
-        margin-right: 0;
-        margin-left: 2em;
-    }
     .sub-menu li a{
         font-weight: 400;
     }
@@ -1169,9 +1208,6 @@ article.artgrid-item{
         padding: 3rem 4rem 2rem;
         margin:  auto;
      }
-    .searchbar input[type="text"] {
-        width: 20em;
-    }
     .sub-menu .col {
         padding: 0 2rem 2rem;
     }
