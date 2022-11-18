@@ -62,10 +62,10 @@ h2, h3, h4, h5, h6{
     font-family: 'Signika', serif;
 }
 h1{
-    font-size: 2.75rem;
+    font-size: 2.15rem;
 }
 h2{
-    font-size: 1.75rem;
+    font-size: 1.5rem;
 }
 h3{
     font-size: 1.25rem;
@@ -117,6 +117,22 @@ section{
 blockquote{
     font-size: 1.55rem;
 }
+.drkener-back_popup{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    opacity: 0;
+    background-color: #000;
+    transition: visibility 0s ease 0.3s, opacity 0.3s ease 0s;
+}
+.menu-expanded .drkener-back_popup{
+    visibility:visible;
+    opacity: 0.6;
+    transition: visibility 0s ease 0s, opacity 0.3s ease 0s;
+}
 .full_width{
     width: 100%;
     min-width: 100%;
@@ -163,11 +179,11 @@ input:active {
     display: block;
     width: 100%;
     z-index: 2;
-    transform: translate3d(-101%, 0px, 0px);
+    transform: translate3d(-101%, 0, 0px);
     height: 1px;
     transition: transform 0.2s ease-in-out 0s;
     position: absolute;
-    bottom: 0;
+    bottom: 0px;
 }
 .first-row,
 .second-row{
@@ -568,7 +584,7 @@ img.menu-arrow {
 .sub-menu li:hover a, 
 .sub-menu li:active a {
     margin-left: 0.8rem!important;
-    margin-right: -0.8rem;
+    margin-right: -0.8rem!important;
 }
 
 /* ZAPISANE ARTYKULY */
@@ -712,28 +728,44 @@ button.usun:hover .style-underline{
 
 /*
 
- ARTYKUŁ 
+ ARTYKUŁ
 
  */
 .article-header{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-content: center;
+}
+#obrazek-tytulowy{
+    height: 480px;
+    min-width: 100%;
+    min-height: 480px;
+    max-width: 100%;
+    max-height: 480px;
 }
 #obrazek-tytulowy img{
     min-width: 100%;
     max-width: 100%;
+    height: 100%;
     margin-bottom: 3rem;
+    object-fit: cover;
+}
+.article-spis_item {
+    font-size: 0.815rem;
+    line-height: 2;
+    position: relative;
+    top: -3px;
 }
 .zapisz_artykul,
 .artgrid-ksiazka{
     background-image: url(img/ksiazka-good.svg);
     background-repeat: no-repeat;
     background-position: center;
-    width: 48px;
-    height: 48px;
+    background-size: contain;
+    width: 24px;
+    height: 23px;
     margin-bottom: 1.8rem;
 }
 .artgrid-ksiazka{
@@ -762,7 +794,7 @@ p.article-zajawka{
 }
 .tag-item,
 .tag_button{
-    font-size: 0.7rem;
+    font-size: 0.63rem;
     color: var(--primaryvarcolor);
     border: 1px solid var(--primaryvarcolor);
     border-radius: 2em;
@@ -787,7 +819,7 @@ p.article-zajawka{
 .article-spis h3{
     font-family: 'Figtree', sans-serif;
     margin-left: 2.4rem;
-    font-size: 1.3rem;
+    font-size: 1rem;
     font-weight: 600;
 }
 .article-spis_lista{
@@ -804,8 +836,9 @@ p.article-zajawka{
     color: var(--body2);
     width: fit-content;
     position: relative;
-    top: -5px;
-    padding: 0 0 3px;
+    top: -1px;
+    padding: 4px 0 6px;
+    line-height: 1;
     overflow: hidden;
 }
 .article-spis_lista li.active,
@@ -818,8 +851,8 @@ p.article-zajawka{
     color: var(--body1);
 }
 .article-info{
-    font-size: 0.8rem;
-    margin-top: 2rem;
+    font-size: 1rem;
+    margin-top: 5rem;
     margin-bottom: 2rem;
 }
 .article-info p{
@@ -838,7 +871,8 @@ p.img_caption {
 }
 .block_grey{
     background-color: var(--ramka);
-    padding: 2rem 1rem 2rem 2.3rem;
+    padding: 4rem 2.3rem 2.5rem 2.5rem;
+    font-size: 18px;
 }
 .list_dot ul{
     margin: 1.5rem 0;
@@ -883,8 +917,9 @@ ol {
     align-items: center;
 }
 .list_stars li::before{
-   content: url(img/Star.svg); 
+   content: url(img/Star.svg);
    margin-right: 1em;
+   margin-top: -1rem;
 }
 .wykrzyknik {
     display: flex;
@@ -895,12 +930,14 @@ ol {
 .wykrzyknik p {
     border-top: 2px solid var(--secondarycolor);
     border-bottom: 2px solid var(--secondarycolor);
-    margin-left: 2em;
+    margin-left: -2rem;
     padding: 2em 0;
 }
 .wykrzyknik::before{
     content: url(img/wykrzyknik.svg);
     margin-bottom: 1rem;
+    position: relative;
+    left: -3rem;
 }
 .cytat {
     display: flex;
@@ -919,6 +956,7 @@ ol {
 .cytat::before{
     content: url(img/cytat.svg);
     margin-bottom: 1rem;
+    margin-left: -3rem;
 }
 .youtube {
     min-height: 460px;
@@ -930,8 +968,8 @@ ol {
 .article-ending{
     text-align: center;
     margin: auto;
-    margin-bottom: 6rem;
-    margin-top: 6rem;
+    margin-bottom: 7rem;
+    margin-top: 7rem;
 }
 .article-footer_header{
     position: relative;
@@ -1048,9 +1086,13 @@ section.kategoria-header {
 .artgrid-container{
     max-width: 1200px;
     margin: auto;
+    display: inline-flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-content: flex-start;
 }
 article.artgrid-item{
-    max-width: 100%;
+    max-width: 25%;
 }
 .masonry-content {
     overflow: hidden;
@@ -1067,6 +1109,29 @@ article.artgrid-item{
 .artgrid-img_cont img {
     width: 100%;
 }
+
+/*
+* zobacz więcej
+*/
+
+section.artykul-proponowane {
+    margin-top: 5.5em;
+}
+.zobacz_wiecej_header{
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+}
+.zobacz_wiecej_header h3 {
+    margin-right: 1rem;
+}
+.zobacz_wiecej_header .tag_button {
+    margin-top: 0;
+}
+
 /* RESPONSIVE */
 
 @media screen and (max-width: 767px) {
@@ -1138,15 +1203,16 @@ article.artgrid-item{
     }
     .sub-menu.ziolana .c-no3 {
         padding-right: 1em;
-        width: 35vw;
+        width: 28vw;
     }
     #zapisane-artykuly-panel {
         max-width: 570px;
         padding: 2rem 1rem 2rem 3rem;
     }
-    article {
+    article,
+    .artykul-proponowane {
         max-width: 80%;
-        margin: auto;
+        margin: 0 auto;
     }
     .article-header {
         flex-direction: row;
@@ -1155,9 +1221,15 @@ article.artgrid-item{
     #article-header_tresc{
         order: -1;
         padding-right: 4rem;
+        max-width: 480px;
     }
     #obrazek-tytulowy{
-        min-width: 50%;
+        width: 370px;
+        height: 480px;
+        min-width: 370px;
+        min-height: 480px;
+        max-width: 370px;
+        max-height: 480px;
     }
     .cytat {
         display: flex;
@@ -1195,6 +1267,9 @@ article.artgrid-item{
     }
     .sub-menu ul {
         gap: 0 4em;
+    }
+    .sub-menu.ziolana .c-no3 {
+        width: 33vw;
     }
     #navi-strip .ziolana div.three-columns.container {
         justify-content: space-around;
@@ -1277,6 +1352,7 @@ footer .logotypy{
 footer .logotypy a{
     margin: 1em 3em;
 }
+
 
 /* MOZILLA firefox */
 
