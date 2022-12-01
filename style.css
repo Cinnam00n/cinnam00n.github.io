@@ -194,7 +194,6 @@ input:active {
     align-items: center;
     justify-content: space-around;
 }
-
 .empty-space-margin{
     display: block;
     clear: both;
@@ -1114,7 +1113,7 @@ article.artgrid-item{
 * zobacz więcej
 */
 
-section.artykul-proponowane {
+section.artykuly-proponowane {
     margin-top: 5.5em;
 }
 .zobacz_wiecej_header{
@@ -1210,7 +1209,7 @@ section.artykul-proponowane {
         padding: 2rem 1rem 2rem 3rem;
     }
     article,
-    .artykul-proponowane {
+    .artykuly-proponowane {
         max-width: 80%;
         margin: 0 auto;
     }
