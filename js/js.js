@@ -34,11 +34,13 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   mobileMenuButon.addEventListener('click', function mobileMenuClick(event) { 
+    event.preventDefault();
     document.querySelector("#mobile-menu nav > .sub-menu").classList.add("active");
     bodyOverflow('add');
   });
   
   mobileMenuClose.addEventListener('click', function mobileMenuClick(event) { 
+    event.preventDefault();
     document.querySelector("#mobile-menu nav > .sub-menu").classList.remove("active");
     mobileSubMenuItems.forEach(SubMenuItem => {
       SubMenuItem.classList.remove("active");
@@ -48,6 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   mobileSubMenu.forEach(SubMenuItem => {
     SubMenuItem.addEventListener('click', function MbileSubMenuClick(event) { 
+      event.preventDefault();
       parentId = event.target.parentNode.id;
         document.querySelector("#" + parentId + " > .mobile-sub-menu-items").classList.add("active");
     }); 
@@ -63,6 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
       
   menuItems.forEach(menuItem => {
     menuItem.addEventListener('click', function handleClick(event) { 
+      event.preventDefault();
       subItems.forEach(subItem => {
           subItem.classList.remove("active");
           bodyOverflow();
@@ -172,8 +176,14 @@ window.onscroll = function() {
   var currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos) {
     document.getElementById("navi-strip").style.top = "0";
-  } else if (currentScrollPos > 200) {
+    if (currentScrollPos < 200) {
+      document.getElementById("navi-strip").classList.remove("menuontop")
+    }
+  } else if (currentScrollPos > 100) {
     document.getElementById("navi-strip").style.top = "-9rem";
+    document.getElementById("navi-strip").classList.add("menuontop")
+  }else{
+    document.getElementById("navi-strip").classList.remove("menuontop")
   }
   prevScrollpos = currentScrollPos;
 }

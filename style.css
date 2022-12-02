@@ -21,7 +21,8 @@ ver: 1.1
     --body1: #211B10;
     --body2: #64625F;
     --body3: #989693;
-    --contwidth: calc(100vw - 4rem);
+    --contwidth:
+    calc(100vw - 4rem);
 }
 ::placeholder {
     color: var(--body3);
@@ -49,7 +50,7 @@ body{
     color: var(--body1);
 }
 main{
-    margin: 12rem 2rem 1rem;
+    margin: 11rem 0rem 1rem;
 }
 h1, h2, h3, h4, h5, h6{
     margin-top: 0.5rem;
@@ -120,6 +121,9 @@ blockquote{
 }
 .disable{
     display: none;
+}
+.menu-expanded {
+    overflow: hidden;
 }
 .drkener-back_popup{
     position: fixed;
@@ -223,14 +227,15 @@ input:active {
 
 #navi-strip{
     font-family: 'Signika', sans-serif;
-    padding: 2.2rem 2em 2rem;
+    padding: 2.2rem 2rem 2rem;
     margin: 0;
-    background-color: #FCFAF5;
+    background-color: transparent;
     transition: top 0.3s ease;
     position: fixed;
     z-index: 99;
     top: 0;
     width: var(--contwidth);
+    transition: top .4s ease-in-out, background-color .4s ease-in-out .4s;
 }
 #navi-strip .container{
     display: grid;
@@ -745,6 +750,115 @@ button.usun:hover .style-underline{
 
 /*
 
+ srtona glowna HOME
+
+ */
+ .baner{
+    display: block;
+    width: 100%;
+    position: relative;
+    margin: 0;
+    background-color: var(--primarycolor);
+    top: -11rem;
+ }
+ .baner .cont{
+    max-width: 1440px;
+    margin: auto;
+    position: relative;
+    min-height: calc(540px + 11rem);
+ }
+ .baner-item,  
+ .baner h1,
+ .baner-subtitle{
+    position: absolute;
+ }
+ .baner h1,
+ .baner-subtitle {
+    bottom: 18%;
+    left: 50%;
+    transform: translate(-50%,0px);
+    z-index: 10;
+}
+.baner-subtitle{
+    bottom: 5%;
+    width: 100%;
+}
+ .baner h1,
+ .baner h2 {
+    font-family: 'Ogg-Bold', serif;
+    text-align: center;
+    color: var(--primaryvarcolor);
+ }
+.baner h1{
+    font-size: 14.25rem;
+    margin-bottom: 0rem;
+}
+.baner h1 span{position: relative;}
+.baner h2{
+    font-size: 1.8rem;
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+}
+img.baner_img-01.baner-item {
+    bottom: 10%;
+    right: 0;
+}
+img.baner_img-02.baner-item {
+    bottom: 2%;
+    right: 7%;
+}
+img.baner_img-04.baner-item {
+    bottom: 42%;
+    left: 3%;
+    z-index: 9;
+}
+img.baner_img-14.baner-item {
+    bottom: -4%;
+    right: 0;
+}
+img.baner_img-05.baner-item {
+    bottom: 28%;
+    right: 15%;
+    z-index: 10;
+}
+img.baner_img-13.baner-item {
+    bottom: -8%;
+    left: 0;
+    z-index: 9;
+}
+img.baner_img-12.baner-item {
+    bottom: 35%;
+    right: 0;
+}
+img.baner_img-11.baner-item {
+    bottom: -2%;
+    left: 17%;
+}
+img.baner_img-08.baner-item {
+    left: 13%;
+    bottom: 35%;
+}
+img.baner_img-09.baner-item {
+    left: 37%;
+    bottom: 21%;
+}
+img.baner_img-07.baner-item {
+    right: 27%;
+    bottom: 30%;
+}
+img.baner_img-06.baner-item {
+    right: 7%;
+    bottom: 27%;
+    z-index: 10;
+}
+img.baner_img-10.baner-item {
+    bottom: 18%;
+    left: 1%;
+    z-index: 9;
+}
+
+/*
+
  ARTYKUŁ
 
  */
@@ -768,6 +882,9 @@ button.usun:hover .style-underline{
     height: 100%;
     margin-bottom: 3rem;
     object-fit: cover;
+}
+h1.article-title {
+    font-size: 2.125rem;
 }
 .article-spis_item {
     font-size: 0.815rem;
@@ -798,7 +915,9 @@ button.usun:hover .style-underline{
     right: -1rem;
     z-index: 21;
 }
-
+.proponowane-male button.artgrid-ksiazka {
+    position: initial;
+}
 p.article-zajawka{
     font-size: 1.33rem;
 }
@@ -881,7 +1000,7 @@ p.article-zajawka{
     margin-bottom: 2rem;
 }
 .main-article section{
-    margin-top: 5rem;
+    margin-top: 6rem;
 }
 .article-info p{
     margin-bottom: 0.5em;
@@ -1080,6 +1199,10 @@ ol {
 .article-footer_item ul li a:hover{
     color: var(--body1);
 }
+.data {
+    font-size: 0.8125rem;
+    line-height: 1.13rem;
+}
 
 /* KATEGORIA */
 
@@ -1155,7 +1278,10 @@ article.artgrid-item{
 .grid-item:hover h4{
     color: var(--primaryvarcolor);
 }
-
+.malytag-title{
+    color: var(--primaryvarcolor);
+    font-size: 4rem;
+}
 /*
 * zobacz więcej
 */
@@ -1222,7 +1348,7 @@ section.artykuly-proponowane:nth-child(2) {
 }
 @media screen and (min-width: 768px) {
     :root{
-        --contwidth: calc(100vw - 4rem);
+        /* --contwidth: calc(100vw - 4rem); */
     }
     body{
         font-size: 16px;
@@ -1383,7 +1509,7 @@ section.artykuly-proponowane:nth-child(2) {
 
 @media screen and (min-width: 1240px) {
     :root{
-        --contwidth: calc(100vw - 8rem);
+        /* --contwidth: calc(100vw - 8rem); */
     }
     #navi-strip {
         padding: 3rem 4rem 2rem;
@@ -1481,7 +1607,10 @@ footer .logotypy{
 footer .logotypy a{
     margin: 1em 3em;
 }
-
+#navi-strip.menuontop{
+    background-color: var(--backgroundcolor);
+    padding: 0.5rem 2rem;
+}
 
 /* MOZILLA firefox */
 
