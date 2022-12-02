@@ -783,8 +783,8 @@ button.usun:hover .style-underline{
     bottom: 5%;
     width: 100%;
 }
- .baner h1,
- .baner h2 {
+.baner h1,
+.baner h2 {
     font-family: 'Ogg-Bold', serif;
     text-align: center;
     color: var(--primaryvarcolor);
@@ -799,18 +799,29 @@ button.usun:hover .style-underline{
     margin-top: 0.2em;
     margin-bottom: 0.2em;
 }
+img.baner-item{
+    animation-name: wiaterek;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
 img.baner_img-01.baner-item {
     bottom: 10%;
     right: 0;
+    animation-name: wiaterek3;
+    animation-duration: 3.2s;
 }
 img.baner_img-02.baner-item {
     bottom: 2%;
     right: 7%;
+    animation-duration: 3.4s;
 }
 img.baner_img-04.baner-item {
     bottom: 42%;
     left: 3%;
     z-index: 9;
+    animation-name: wiaterek2;
+    animation-duration: 3s;
 }
 img.baner_img-14.baner-item {
     bottom: -4%;
@@ -820,43 +831,84 @@ img.baner_img-05.baner-item {
     bottom: 28%;
     right: 15%;
     z-index: 10;
+    animation-duration: 3.7s;
 }
 img.baner_img-13.baner-item {
     bottom: -8%;
     left: 0;
     z-index: 9;
+    animation-duration: 1.7s;
 }
 img.baner_img-12.baner-item {
     bottom: 35%;
     right: 0;
+    animation-name: wiaterek3;
+    animation-duration: 1.2s;
 }
 img.baner_img-11.baner-item {
     bottom: -2%;
     left: 17%;
+    animation-name: wiaterek2;
+    animation-duration: 1.5s;
 }
 img.baner_img-08.baner-item {
     left: 13%;
     bottom: 35%;
+    animation-name: wiaterek3;
+    animation-duration: 3.4s;
 }
 img.baner_img-09.baner-item {
     left: 37%;
     bottom: 21%;
+    animation-name: wiaterek2;
+    animation-duration: 2s;
 }
 img.baner_img-07.baner-item {
     right: 27%;
     bottom: 30%;
+    animation-duration: 4.4s;
 }
 img.baner_img-06.baner-item {
     right: 7%;
     bottom: 27%;
     z-index: 10;
+    animation-name: wiaterek2;
+    animation-duration: 3.5s;
 }
 img.baner_img-10.baner-item {
     bottom: 18%;
     left: 1%;
     z-index: 9;
+    animation-name: wiaterek3;
+    animation-duration: 2.2s;
 }
 
+@keyframes wiaterek {
+    from {
+        rotate: 0 0 0 0deg;
+    }
+    to {
+        rotate: 1 1 0 19deg;
+    }
+  }
+@keyframes wiaterek2 {
+    from {
+        rotate: 0 0 0 0deg;
+    }
+    to {
+        rotate: 1 -1 0 -10deg;
+    }
+  }
+  @keyframes wiaterek3 {
+    from {
+        rotate: 0 0 0 0deg;
+        scale: 1;
+    }
+    to {
+        rotate: 0 1 0.1 8deg;
+        scale: 1.005;
+    }
+  }
 /*
 
  ARTYKUŁ
