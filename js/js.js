@@ -9,18 +9,20 @@ document.addEventListener("DOMContentLoaded", () => {
       return(o.id);
     }
 
-  var menuItems = document.querySelectorAll("#desktop-menu .main-menu .menu-item"),
+/*
+** Nawigacja MENU GŁOWNE (desktop i mobile)
+*/    
+
+  const menuItems = document.querySelectorAll("#desktop-menu .main-menu .menu-item"),
       subItems = document.querySelectorAll("#desktop-menu .sub-menu"),
       mobileMenuButon = document.querySelector("#mobile-menu nav > div > .menu-item"),
       mobileMenuClose = document.querySelector("#mobile-menu-close"),
       mobileSubMenu = document.querySelectorAll("button.sub-menu-item"),
       mobileSubMenuItems = document.querySelectorAll(".mobile-sub-menu-items"),
-      mobileSubMenuBack = document.querySelectorAll(".mobile-menu-back > img");
+      mobileSubMenuBack = document.querySelectorAll(".mobile-menu-back > img"),
+      body = document.body;
 
-  const naviStrip = document.getElementById("navi-strip"),
-        body = document.body;
-
-  function bodyOverflow(data){
+  function bodyOverflow(data){ // zaciemnianie tła pod otwartym menu (popup)
     if( data == 'add'){
       body.classList.add("overflow-hidden");
     } else  if( data == 'menu'){
@@ -102,7 +104,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     });
   
-
+/*
+** otwieranie i zamykanie panelu ZAPISANE ARTYKULY
+*/
   const zapisaneClose = document.querySelectorAll(".zapisane-close"),
       zapisaneOpen = document.querySelectorAll(".zapisane-artykuly-button"),
       zapisanePanel = document.getElementById("zapisane-artykuly-panel");
@@ -120,6 +124,10 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+
+  /*
+  ** Nawigacja (otwieranie i zamykanie) blokami Autorzy i Bibliografia
+  */
   const 
         bibliogr_container = document.getElementById("block-bibliografia"),
         bibliogr_button_open = document.querySelector("#block-bibliografia button.article-footer_expand"),
@@ -159,18 +167,20 @@ document.addEventListener("DOMContentLoaded", () => {
 MENU TOGGLE ON SCROLL
 */
 var prevScrollpos = window.pageYOffset;
-prevScrollpos = prevScrollpos + 400;
 
 window.onscroll = function() {
   var currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos) {
     document.getElementById("navi-strip").style.top = "0";
-  } else if (currentScrollPos > 400) {
+  } else if (currentScrollPos > 300) {
     document.getElementById("navi-strip").style.top = "-9rem";
   }
   prevScrollpos = currentScrollPos;
 }
 
+/*
+** MASONRY OPTIONS
+*/
 var elem = document.querySelector('.grid');
 var msnry = new Masonry( elem, {
   // options
