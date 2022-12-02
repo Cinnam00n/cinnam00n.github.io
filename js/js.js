@@ -183,7 +183,7 @@ var msnry = new Masonry( elem, {
 //   for an individual element
 var msnry = new Masonry( '.grid', {
   // options
-  gutter: 50
+  gutter: 36
 });
 
 });

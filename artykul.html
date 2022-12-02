@@ -9,11 +9,12 @@
 </head>
 
 <body id="page" class="artykul">
-    <div id="navi-strip">
-        <div id="mobile-menu" class="container">
+
+    <div id="navi-strip">    <!-- PASEK NAWIGACJI -->
+        <div id="mobile-menu" class="container">     <!-- MENU MOBILNE do 768px -->
             <a href="index.html"><img src="img/logo_blogrod.png" class="logo" alt="logo" aria-label="logo"></a>
             <div class="mobile-menu-right">
-                <div class="second-menu">
+                <div class="menu_searchbar"> <!-- BLOK WYSZUKIWANIE -->
                     <div class="searchbar">
                         <form action="#" method="POST" class="search-block">
                             <label>
@@ -24,13 +25,13 @@
                         </form>
                     </div>
                     <a href="#" class="zapisane-artykuly-button book"><img alt="książka ikona" src="img/ksiazka-menu.svg"></a>
-                </div>
-                <nav id="mobile-menu-main"  class="main-menu">
-                    <div class="button-border">
-                        <a href="#" class="menu-item">menu</a>
+                </div> <!-- END BLOK WYSZUKIWANIE -->
+                <nav id="mobile-menu-main"  class="main-menu"> <!-- MOBILNE MENU CONTAINER-->
+                    <div class="button-border"> <!-- PRZYCICK DO OTWIERANIA MENU MOBILNEGO -->
+                        <a href="#" class="menu-item">menu</a> 
                     </div>
                     <div class="sub-menu">
-                        <div id="sub-mobile-menu-header">
+                        <div id="sub-mobile-menu-header"> <!-- NAGLOWEK MOBILE MENU-->
                             <a href="index.html"><img src="img/logo_blogrod.png" class="logo" alt="logo" aria-label="logo"></a>
                             <div id="mobile-menu-close"><img alt="krzyżyk x" src="img/cross-new.svg"></div>
                         </div>
@@ -88,11 +89,11 @@
                             </div>
                         </div>
                     </div>
-                </nav>
+                </nav>  <!-- END MOBILNE MENU CONTAINER-->
             </div>
-        </div>
+        </div> <!-- END MENU MOBILNE do 768px -->
 
-        <div id="desktop-menu" class="container">
+        <div id="desktop-menu" class="container"> <!-- MENU DESKTOP od 769px -->
             <a href="index.html"><img alt="logo blogród"  src="img/logo_blogrod.png" class="logo"></a>
             <div class="searchbar">
                 <form action="#" method="POST" class="search-block">
@@ -109,17 +110,15 @@
                 <div id="zwiedzaj" class="menu-cont">
                     <a href="#" class="menu-item">zwiedzaj <img alt="strzałka w dół" src="img/arrow-down.svg" class="menu-arrow"></a>
                 </div>
-                
-            <!--<div class="second-menu">--> 
                 <a href="#" class="menu-item">o nas</a>
             </nav>
             <a href="#" class="zapisane-artykuly-button book"><img alt="ikona książki" src="img/ksiazka-wypelniona.png"></a>
-            <!--</div>-->
-            <div class="sub-menu ziolana">
+           
+            <div class="sub-menu ziolana"> <!-- SUB MENU OTWIERANE - ZIOLANA -->
                 <div class="three-columns container">
-                    <div class="col c-no1">
-                        <ul>
-                            <li class="sub-menu-item"><a href="kategoria.html">Odporność i infekcje</a></li>
+                    <div class="col c-no1"> <!-- KOLUMNA PIERWSZA I DRUGA-->
+                        <ul> <!-- BLOK SPIS KATEGORII -->
+                            <li class="sub-menu-item"><a href="kategoria.html">Odporność i infekcje</a></li> <!-- ITEM KATEGRIA -->
                             <li class="sub-menu-item"><a href="kategoria.html">Adaptogeny</a></li>
                             <li class="sub-menu-item"><a href="kategoria.html">Stres, sen, nastrój</a></li>
                             <li class="sub-menu-item"><a href="kategoria.html">Pamięć i koncentracja</a></li>
@@ -139,19 +138,19 @@
                             <li class="sub-menu-item"><a href="kategoria.html">Skóra i włosy</a></li>
                             <li class="sub-menu-item"><a href="kategoria.html">Kości i stawy</a></li>
                             <li class="sub-menu-item"><a href="kategoria.html">Oczyszczenia</a></li>
-                        </ul>
+                        </ul><!-- END BLOK SPIS KATEGORII -->
                     </div>
-                    <div class="col c-no3">
-                        <div id="adaptogeny" class="submenu-opis">
+                    <div class="col c-no3"> <!-- KOLUMNA TRZECIA -->
+                        <div id="adaptogeny" class="submenu-opis"> <!-- OPIS DO KATEGORII SUB MENU-->
                             <p>To grupa ziół 'adaptująca' do trudnych lub zmiennych warunków środowiska. Są uznane za jedne z najpotrzebniejszych współczesnym ludziom ziół. Tutaj znajdziesz o nich wszystko.</p>
                             <img alt="gałązka" class="patyczkostrzalka" src="img/arrow-new.png">
-                        </div>
+                        </div> <!-- END OPIS KATEGORII -->
                     </div>
                 </div>
                 <div class="menu-foter">
-                    <a href="#">zobacz wszystkie artykuly<span class="style-underline"></span></a>
+                    <a href="kategoria.html">zobacz wszystkie artykuly<span class="style-underline"></span></a>
                 </div>
-            </div>
+            </div> <!-- END SUB MENU OTWIERANE - ZIOLANA -->
             <div class="sub-menu zwiedzaj">
                 <div class="twoo-columns">
                     <div class="col c-no1">
@@ -175,10 +174,10 @@
                     <a href="#">zobacz wszystkie artykuły<span class="style-underline"></span></a>
                 </div>
             </div>
-        </div>
+        </div><!-- END MENU DESKTOP od 769px -->
         
-        <div id="zapisane-artykuly-panel">
-            <div class="zapisane-header">
+        <div id="zapisane-artykuly-panel"> <!-- ZAPISANE ARTYKULY -->
+            <div class="zapisane-header"> 
                 <img alt="książka ikona" src="img/ksiazka-wypelnienie-artykul.svg">
                 <h3>zapisane artykuły</h3>
                 <div class="zapisane-close"><img alt="krzyżyk x" src="img/cross-new.svg"></div>
@@ -274,13 +273,13 @@
                 </article>
                 <div class="empty-space-margin"></div>    
             </div>
-        </div>
-    </div>
-    <div class="drkener-back_popup" ></div>
+        </div> <!-- END ZAPISANE ARTYKULY -->
+    </div>  <!-- END PASEK NAWIGACJI -->
+    <div class="drkener-back_popup" ></div> <!-- SCIEMNIACZ TŁA -->
     <main>
-        <div class="container">  
-            <article id="art-001" class="main-article kandydoza">
-                <header class="article-header">
+        <div class="container"> <!-- KONTENER DO CAŁEJ STRONY max 1240px --> 
+            <article id="art-001" class="main-article kandydoza"> <!-- ARTYKUŁY CAŁY BLOK-->
+                <header class="article-header"> <!-- ARTYKUŁY NAGLOWEK Z LISTA TAGOW I ZDJECEM -->
                     <div id="obrazek-tytulowy">
                         <img src="database/Rectangle-211.png" alt="obrazek-tytuowy">
                     </div>
@@ -297,18 +296,18 @@
                             <a href="#" class="tag-item">candida</a>
                         </div>
                     </div>
-                </header>
-                <section class="article-spis">
+                </header> <!-- END ARTYKUŁY NAGLOWEK -->
+                <section class="article-spis"> <!-- ARTYKUŁY SPIS TRESCI-->
                     <h3>Spis treści</h3>
                     <ul class="article-spis_lista">
-                        <li>
+                        <li> <!-- POJEDYNCZY ITEM DLA ARTYKUŁY SPIS TRESCI-->
                             <div class="article-spis_item ovhidden">
                                 <a href="#chapter_01" class="aricle-spis_title">
                                     Czy grzybica = Kandydoza
                                     <span class="style-underline"></span>
                                 </a>
                             </div>
-                        </li>
+                        </li> <!-- END POJEDYNCZY ITEM SPISU TRESCI-->
                         <li>
                             <div class="article-spis_item ovhidden">
                                 <a href="#chapter_02" class="aricle-spis_title">
@@ -349,7 +348,7 @@
                                 </a>
                             </div>
                         </li>
-                        <li>
+                        <li> 
                             <div class="article-spis_item ovhidden">
                                 <a href="#chapter_07" class="aricle-spis_title">
                                     Czy grzybica = Kandydoza
@@ -357,12 +356,12 @@
                                 </a>
                             </div>
                         </li>
-                </section>
-                <section class="article-info">
+                </section> <!-- END ARTYKUŁY SPIS TRESCI-->
+                <section class="article-info"> <!-- INFO AUTOR I CZAS -->
                     <p>napisała: <span class="autor bolded">Weronika</span></p>
                     <p>ten artykul przeczytasz w mniej niz <span class="czas-czytania bolded">8 min</span></p>
-                </section>
-                <section class="article-content">
+                </section> <!-- END INFO AUTOR I CZAS -->
+                <section class="article-content"> <!-- TRESC ARTYKUŁU CONTENT -->
                     <div id="chapter_01" class="article-chapter">
                         <div class="article-block list_dot">
                             <h2 class="contnet-subtitle">Znaczące obniżenie odporności organizmu</h2>
@@ -451,12 +450,12 @@
 
                     </div>
                     
-                </section>
-                <section class="article-footer">
+                </section><!-- END TRESC ARTYKUŁU CONTENT -->
+                <section class="article-footer"> <!-- ZAWARTOSC POD ARTYKUŁEM  -->
                     <div id="block-article_end" class="article-ending">
                             <img src="img/dlonie.svg" alt="dłonie">
                     </div>
-                    <div id="block-bibliografia" class="article-footer_item article-bibliografia">
+                    <div id="block-bibliografia" class="article-footer_item article-bibliografia"> <!-- BIBLIOGRAFIA -->
                         <div class="article-footer_header">
                             <img src="img/bibliografia.png"><h3>Bibliografia</h3>
                             <div class="article-footer_navi">
@@ -465,9 +464,8 @@
                             </div>
                         </div>
                         <p>Bagheri H, Ghasemi F, Barreto GE, Rafiee R, Sathyapalan T, Sahebkar A. Effects of curcumin on mitochondria in neurodegenerative diseases. Biofactors. 2020 Jan;46(1):5-20.. Chowanadisai W, Bauerly KA, Tchaparian E, Wong A, Cortopassi GA, Rucker RB. Pyrroloquinoline quinone stimulates mitochondrial biogenesis through cAMP response element-binding protein phosphorylation and increased PGC-1alpha expression. J Biol Chem. 2010;285(1):142-152. Goetzl EJ, Wolkowitz OM, Srihari VH, Reus VI, Goetzl L, Kapogiannis D, Heninger GR, Mellon SH. Abnormal levels of mitochondrial proteins in plasma neuronal extracellular vesicles in major depressive disorder. Mol Psychiatry. 2021 Sep 1. Grimm A, Eckert A. Brain aging and neurodegeneration: from a mitochondrial point of view. J Neurochem. 2017;143(4):418-431. Herbst EA, Paglialunga S, Gerling C, Whitfield J, Mukai K, Chabowski A, Heigenhauser GJ, Spriet LL, Holloway GP. Omega-3 supplementation alters mitochondrial membrane composition and respiration kinetics in human skeletal muscle. J Physiol. 2014 Mar 15;592(6):1341-52. Mandal P. K., Tripathi M. and Sugunan S. (2012) Brain oxidative stress: detection and mapping of anti‐oxidant marker ‘Glutathione’ in different brain regions of healthy male/female, MCI and Alzheimer patients using non‐invasive magnetic resonance spectroscopy. Biochem. Biophys. Res. Commun.417, 43–48. Wojsiat J, Laskowska-Kaszub K, Alquézar C, Białopiotrowicz E, Esteras N, Zdioruk M, Martin-Requero A, Wojda U. Familial Alzheimer's Disease Lymphocytes Respond Differently Than Sporadic Cells to Oxidative Stress: Upregulated p53-p21 Signaling Linked with Presenilin 1 Mutants. Mol Neurobiol. 2017 Sep;54(7):5683-5698. https://postepybiochemii.ptbioch.edu.pl/index.php/PB/article/view/231/336 https://www.scientificamerican.com/article/could-mitochondria-be-the-key-to-a-healthy-brain/</p>
-    
-                    </div>
-                    <div id="block-autorzy" class="article-footer_item article-autorzy">
+                    </div> <!-- END BIBLIOGRAFIA -->
+                    <div id="block-autorzy" class="article-footer_item article-autorzy"> <!-- AUTORZY -->
                         <div class="article-footer_header">
                             <img src="img/autorzy.png"><h3>Autorzy</h3>
                             <div class="article-footer_navi">
@@ -491,37 +489,35 @@
                                 <li><a href="#">organizm podczas walki z Candidą.</a></li>
                             </ul>
                         </div>
-
-                    </div>
-                    
-                </section>
+                    </div> <!-- END AUTORZY -->
+                </section><!-- END ZAWARTOSC POD ARTYKUŁEM  -->
             </article>
-            <section class="artykuly-proponowane">
-                <div class="zobacz_wiecej">
+            <section class="artykuly-proponowane"> <!-- ARTYKULY PROPONOWANE PO TAGU -->
+                <div class="zobacz_wiecej"> <!-- PROPONOWANE HEADER -->
                     <div class="zobacz_wiecej_header">
                         <h3>zobacz wiecej z: </h3><button class="tag-item tag_button">zbieranie ziół</button>
                     </div>
-                </div>
-                <div class="artgrid">
-                    <div id="artgrid-container_id" class="artgrid-container">
-                        <article class="artgrid-item">
-                            <div class="masonry-content">
-                                <div class="artgrid-img_cont">
+                </div><!-- END PROPONOWANE HEADER -->
+                <div class="artgrid"> <!-- PROPONOWANE CONTAINER -->
+                    <div id="artgrid-container_id" class="artgrid-container"> <!-- PROPONOWANE CONTENT -->
+                        <article class="artgrid-item"> <!-- PROPONOWANE ITEM CONTAINER -->
+                            <div class="masonry-content"> <!-- PROPONOWANE ITEM CONTENT -->
+                                <div class="artgrid-img_cont"> <!-- IMAGE CONTAINER -->
                                     <img src="database/zdjecie1.png">
-                                </div>
-                                <div class="artgrid-header">
+                                </div><!-- END IMAGE CONTAINER -->
+                                <div class="artgrid-header"> <!-- HEADER CONTAINER -->
                                     <h4 class="artgrid-title">Mg2+  magnez: niezbędnik użytkownika</h4>
                                     <button class="artgrid-ksiazka"></button>
-                                </div>
-                                <div class="artgrid-zajawka">
+                                </div> <!-- END HEADER CONTAINER -->
+                                <div class="artgrid-zajawka"> <!-- ZAJAWKA CONTAINER -->
                                     <p>Można je spotkać prawie wszędzie  - w bujnym wilgotnym podszyciu lasu, na łąkach, ale i na miejskich skwerkach i trawnikach. Wspinają się na źdźbła traw i na krzaki.</p>
-                                </div>
-                                <div class="artgrid-tagi">
+                                </div> <!-- END ZAJAWKA CONTAINER -->
+                                <div class="artgrid-tagi"> <!--  TAGI CONTAINER -->
                                     <a href="" class="tag-item">chorob autoimunologiczne</a>
                                     <a href="" class="tag-item">zbieranie ziol</a>
-                                </div>
-                            </div>
-                        </article>
+                                </div> <!-- END TAGI CONTAINER -->
+                            </div> <!-- END PROPONOWANE ITEM CONTENT -->
+                        </article> <!-- END PROPONOWANE ITEM CONTAINER -->
                         <article class="artgrid-item">
                             <div class="masonry-content">
                                 <div class="artgrid-img_cont">
@@ -576,9 +572,9 @@
                                 </div>
                             </div>
                         </article>
-                    </div>  
-                </div>
-            </section>
+                    </div>  <!-- END PROPONOWANE CONTENT -->
+                </div> <!-- END PROPONOWANE CONTAINER -->
+            </section> <!-- END ARTYKULY PROPONOWANE PO TAGU -->
             <section class="artykuly-proponowane">
                 <div class="zobacz_wiecej">
                     <div class="zobacz_wiecej_header">
@@ -746,8 +742,8 @@
                 </div>
             </section>
         </div>
-    </main>
-    <footer class="footer">
+    </main> 
+    <footer class="footer"> <!-- STOPKA STRONY -->
         <div class="container">
             <div class="four-columns">
                 <div class="col">
@@ -784,6 +780,6 @@
             </div>
             <div class="empty-space-margin"></div>
         </div>
-    </footer>
+    </footer> <!-- END STOPKA STRONY -->
 </body>
 </html>
