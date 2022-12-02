@@ -793,6 +793,10 @@ button.usun:hover .style-underline{
     margin-left: 0.5rem;
     margin-right: 0.5rem;
     background-size: contain;
+    position: absolute;
+    bottom: 9rem;
+    right: -1rem;
+    z-index: 21;
 }
 
 p.article-zajawka{

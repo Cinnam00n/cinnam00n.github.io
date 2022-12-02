@@ -172,7 +172,7 @@ window.onscroll = function() {
   var currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos) {
     document.getElementById("navi-strip").style.top = "0";
-  } else if (currentScrollPos > 300) {
+  } else if (currentScrollPos > 200) {
     document.getElementById("navi-strip").style.top = "-9rem";
   }
   prevScrollpos = currentScrollPos;
