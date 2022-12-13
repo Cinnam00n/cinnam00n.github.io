@@ -56,7 +56,8 @@ body{
     color: var(--body1);
 }
 main{
-    margin: 11rem 0rem 1rem;
+    padding: 11rem 0rem 1rem;
+    overflow: hidden;
 }
 h1, h2, h3, h4, h5, h6{
     margin-top: 0.5rem;
@@ -774,10 +775,11 @@ button.usun:hover .style-underline{
  */
  .baner{
     display: block;
-    width: 100%;
+    width: 100vw;
     margin: 0;
     background-color: var(--primarycolor);
     margin-top: -11rem;
+    margin-left: -1rem;
  }
  .baner .cont{
     width: var(--contwidth);
@@ -792,7 +794,7 @@ button.usun:hover .style-underline{
  }
  .baner h1,
  .baner-subtitle {
-    bottom: 18%;
+    bottom: 37%;
     left: 50%;
     transform: translate(-50%,0px);
     z-index: 10;
@@ -800,6 +802,7 @@ button.usun:hover .style-underline{
 .baner-subtitle{
     bottom: 5%;
     width: 100%;
+    display: none;
 }
 .baner h1,
 .baner h2 {
@@ -808,7 +811,7 @@ button.usun:hover .style-underline{
     color: var(--primaryvarcolor);
  }
 .baner h1{
-    font-size: 14.25rem;
+    font-size: 25vw;
     margin-bottom: 0rem;
 }
 .baner h1 span{position: relative;}
@@ -823,6 +826,8 @@ img.baner-item{
     animation-duration: 4s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
+    transform: scale(80%);
+    display: none;
 }
 img.baner_img-01.baner-item {
     bottom: 10%;
@@ -837,29 +842,34 @@ img.baner_img-02.baner-item {
     animation-duration: 3.4s;
 }
 img.baner_img-04.baner-item {
-    bottom: 42%;
-    left: 3%;
+    bottom: 17%;
+    left: -50%;
     z-index: 9;
     animation-name: wiaterek2;
     animation-duration: 3s;
     animation-direction: alternate-reverse;
+    display: block;
 }
 img.baner_img-14.baner-item {
-    bottom: -4%;
-    right: 0;
+    bottom: -8%;
+    right: -68%;
+    z-index: 9;
+    display: block;
 }
 img.baner_img-05.baner-item {
-    bottom: 28%;
-    right: 15%;
-    z-index: 10;
+    bottom: 9%;
+    right: -26%;
+    z-index: 8;
     animation-duration: 3.7s;
     animation-direction: alternate-reverse;
+    display: block;
 }
 img.baner_img-13.baner-item {
-    bottom: -8%;
-    left: 0;
+    bottom: -14%;
+    left: -53%;
     z-index: 9;
     animation-duration: 2.7s;
+    display: block;
 }
 img.baner_img-12.baner-item {
     bottom: 35%;
@@ -868,45 +878,55 @@ img.baner_img-12.baner-item {
     animation-duration: 3.2s;
 }
 img.baner_img-11.baner-item {
-    bottom: -2%;
-    left: 17%;
+    bottom: -11%;
+    left: 10%;
     animation-name: wiaterek2;
     animation-duration: 4.5s;
     animation-direction: alternate-reverse;
+    display: block;
+    transform: scale(0.9);
 }
 img.baner_img-08.baner-item {
-    left: 13%;
-    bottom: 35%;
+    left: -50%;
+    bottom: 52%;
     animation-name: wiaterek3;
     animation-duration: 3.4s;
     animation-direction: alternate-reverse;
+    display: block;
+    transform: scale(1.06);
 }
 img.baner_img-09.baner-item {
-    left: 37%;
-    bottom: 21%;
+    left: 2%;
+    bottom: 37%;
     animation-name: wiaterek2;
     animation-duration: 2s;
+    display: block;
+    scale: 1;
 }
 img.baner_img-07.baner-item {
-    right: 27%;
-    bottom: 30%;
+    right: -42%;
+    bottom: 38%;
     animation-duration: 4.4s;
     animation-direction: alternate-reverse;
+    display:  block;
+    transform: scale(0.9);
 }
 img.baner_img-06.baner-item {
-    right: 7%;
-    bottom: 27%;
-    z-index: 10;
+    right: -42%;
+    bottom: 8%;
+    z-index: 8;
     animation-name: wiaterek2;
     animation-duration: 3.5s;
+    display: block;
 }
 img.baner_img-10.baner-item {
-    bottom: 18%;
-    left: 1%;
+    bottom: 8%;
+    left: -46%;
     z-index: 9;
     animation-name: wiaterek3;
     animation-duration: 2.2s;
     animation-direction: alternate-reverse;
+    display: block;
 }
 
 @keyframes wiaterek {
@@ -1148,7 +1168,7 @@ p.article-zajawka{
     font-size: 1.8rem;
     line-height: 1.3;
     list-style: circle;
-    margin-left: -1rem;
+    margin-left: -0.6rem;
     text-indent: 1rem;
     margin-bottom: 0;
 }
@@ -1157,7 +1177,7 @@ p.article-zajawka{
     width: fit-content;
     position: relative;
     top: -1px;
-    padding: 4px 0 6px;
+    padding: 0 0 2px;
     line-height: 1;
     overflow: hidden;
 }
@@ -1521,10 +1541,15 @@ section.artykuly-proponowane:nth-child(2) {
         display: none;
     }
     main {
-        margin: 10rem 1rem 1rem
+        margin: 0;
+        padding: 10rem 1rem 1rem;
+        overflow: hidden;
     }
     .full-width{
         margin-left: -1rem;
+    }
+    .grid-najnowsze{
+        display: block;
     }
 }
 
@@ -1539,11 +1564,70 @@ section.artykuly-proponowane:nth-child(2) {
     section.kategoria-header {
         margin: 0 auto 0 0;
     }
+    .baner h1, .baner-subtitle {
+        bottom: 22%;
+    }
+    img.baner-item {
+        transform: scale(1);
+    }
+    img.baner_img-04.baner-item {
+        bottom: 17%;
+        left: -17%;
+    }
+    img.baner_img-05.baner-item {
+        bottom: 9%;
+        right: -26%;
+    }
+    img.baner_img-06.baner-item {
+        right: -11%;
+        bottom: 8%;
+    }
+    img.baner_img-07.baner-item {
+        right: -7%;
+        bottom: 35%;
+        transform: scale(1);
+    }
+    img.baner_img-08.baner-item {
+        left: -24%;
+        bottom: 40%;
+    }
+    img.baner_img-09.baner-item {
+        left: 28%;
+        bottom: 28%;
+    }
+    img.baner_img-10.baner-item {
+        bottom: 8%;
+        left: 7%;
+    }
+    img.baner_img-11.baner-item {
+        bottom: -11%;
+        left: 32%;
+        transform: scale(1.2);
+    }
+    img.baner_img-13.baner-item {
+        bottom: -14%;
+        left: -30%;
+    }
+    img.baner_img-14.baner-item {
+        bottom: -8%;
+        right: -45%;
+    }
+
 }
 @media screen and (min-width: 650px) {
     .kategoria-header {
         justify-content: center;
         flex-wrap: nowrap;
+    }
+    .grid-najnowsze .grid-najnowsze-item {
+        max-width: calc(50% - 36px);
+    }
+    .grid-najnowsze {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        justify-content: center;
     }
 }
 @media screen and (min-width: 768px) {
@@ -1665,6 +1749,89 @@ section.artykuly-proponowane:nth-child(2) {
     .grid-item {
         width: calc(33.3% - 36px);
     }
+    .baner{
+        margin-left: 0;
+     }
+     .baner .cont{
+        width: 100%;
+        margin: auto;
+        position: relative;
+        min-height: calc(470px + 11rem);
+     }
+     .baner h1 {
+        font-size: 20vw;
+     }
+     img.baner-item{
+        transform: scale(1);
+    }
+    img.baner_img-01.baner-item {
+        bottom: 10%;
+        right: 0;
+        display: none;
+    }
+    img.baner_img-02.baner-item {
+        bottom: 2%;
+        right: -13%;
+        display: block;
+    }
+    img.baner_img-04.baner-item {
+        bottom: 42%;
+        left: -19%;
+        z-index: 9;
+    }
+    img.baner_img-14.baner-item {
+        bottom: -4%;
+        right: -24%;
+    }
+    img.baner_img-05.baner-item {
+        bottom: 28%;
+        right: -3%;
+        z-index: 10;
+    }
+    img.baner_img-13.baner-item {
+        bottom: -8%;
+        left: -22%;
+        z-index: 9;
+    }
+    img.baner_img-12.baner-item {
+        bottom: 35%;
+        right: 0;
+        display: none;
+    }
+    img.baner_img-11.baner-item {
+        bottom: -2%;
+        left: 2%;
+        transform: scale(1);
+    }
+    img.baner_img-08.baner-item {
+        left: -3%;
+        bottom: 35%;
+    }
+    img.baner_img-09.baner-item {
+        left: 37%;
+        bottom: 21%;
+    }
+    img.baner_img-07.baner-item {
+        right: 11%;
+        bottom: 30%;
+    }
+    img.baner_img-06.baner-item {
+        right: -11%;
+        bottom: 27%;
+        z-index: 10;
+    }
+    img.baner_img-10.baner-item {
+        bottom: 18%;
+        left: -15%;
+        z-index: 9;
+    }
+    .home .container section {
+        padding: 0 1rem;
+    }
+    .baner-subtitle {
+        bottom: 5%;
+        display: block;
+    }
 }
 
 @media screen and (min-width: 1024px) {
@@ -1710,6 +1877,18 @@ section.artykuly-proponowane:nth-child(2) {
     .grid-item--width2 img{
         max-height: 212px;
         object-fit: cover;
+    }
+    img.baner-item{
+        transform: scale(1);
+    }
+    .baner-subtitle {
+        bottom: 5%;
+    }
+    .grid-najnowsze{
+        display: grid;
+    }
+    .grid-najnowsze .grid-najnowsze-item {
+        max-width: 100%;
     }
 }
 
@@ -1763,6 +1942,81 @@ section.artykuly-proponowane:nth-child(2) {
         overflow: hidden;
         padding: 0 24px 16px 24px;
     }
+    .baner {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .baner .cont {
+        width: var(--contwidth);
+        margin: auto;
+        position: relative;
+        min-height: calc(540px + 11rem);
+    }
+    .baner-subtitle {
+        bottom: 5%;
+    }
+    .baner h1 {
+        font-size: 14.25rem;
+        bottom: 18%;
+    }
+    img.baner_img-01.baner-item {
+        bottom: 10%;
+        right: 0;
+        display: block;
+    }
+    img.baner_img-02.baner-item {
+        bottom: 2%;
+        right: 7%;
+        display: block;
+    }
+    img.baner_img-04.baner-item {
+        bottom: 42%;
+        left: 3%;
+    }
+    img.baner_img-14.baner-item {
+        bottom: -4%;
+        right: 0;
+    }
+    img.baner_img-05.baner-item {
+        bottom: 28%;
+        right: 15%;
+    }
+    img.baner_img-13.baner-item {
+        bottom: -8%;
+        left: 0;
+        z-index: 9;
+    }
+    img.baner_img-12.baner-item {
+        bottom: 35%;
+        right: 0;
+        display: block;
+    }
+    img.baner_img-11.baner-item {
+        bottom: -2%;
+        left: 17%;
+    }
+    img.baner_img-08.baner-item {
+        left: 13%;
+        bottom: 35%;
+    }
+    img.baner_img-09.baner-item {
+        left: 37%;
+        bottom: 21%;
+    }
+    img.baner_img-07.baner-item {
+        right: 27%;
+        bottom: 30%;
+    }
+    img.baner_img-06.baner-item {
+        right: 7%;
+        bottom: 27%;
+    }
+    img.baner_img-10.baner-item {
+        bottom: 18%;
+        left: 1%;
+    }
+
 }
 
 @media screen and (min-width: 1440px) {
