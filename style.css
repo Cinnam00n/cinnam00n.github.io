@@ -370,6 +370,13 @@ img.menu-arrow {
 #desktop-menu .main-menu a:hover img.menu-arrow{
     filter: invert(27%) sepia(87%) saturate(352%) hue-rotate(100deg) brightness(96%) contrast(86%);
 }
+.book img {
+    filter: grayscale(0) contrast(1);
+    transition: filter 0.3s ease;
+}
+a.book:hover img{
+    filter: grayscale(1) contrast(1.5);
+}
 .sub-menu{
     background-color: var(--backgroundcolor);
     color: var(--primaryvarcolor);
@@ -1903,10 +1910,10 @@ footer a:hover .style-underline{
     }
     .projektautors, .logotypy {
         text-align: right;
-        margin-right: 5rem;
+        margin-right: 15rem;
     }
     footer .logotypy {
-        margin: 2rem 5rem 0 auto;
+        margin: 2rem 15rem 0 auto;
     }
 }
 @media screen and (min-width: 768px) {
