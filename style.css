@@ -2282,11 +2282,11 @@ footer a:hover .style-underline{
         padding-right: 2rem;
     }
     .grid-item {
-        width: calc(25% - 36px);
+        width: calc(25% - 52px);
         margin-bottom: 50px;
     }
     .grid-item--width2{
-        width: calc(50% - 36px);
+        width: calc(50% - 52px);
     }
     .grid-item--width2 img{
         max-height: 212px;

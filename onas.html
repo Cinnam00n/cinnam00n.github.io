@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html class="objectfit object-fit" lang="pl-PL">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>MAGICZNY BLOGRÓD</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="js/js.js"></script>
+</head>
+
+<body id="page" class="home">
+    <div id="navi-strip" class="">    <!-- PASEK NAWIGACJI -->
+        <div id="mobile-menu" class="container">     <!-- MENU MOBILNE do 768px -->
+            <a href="index.html"><img src="img/logo_blogrod.png" class="logo" alt="logo" aria-label="logo"></a>
+            <div class="mobile-menu-right">
+                <div class="menu_searchbar"> <!-- BLOK WYSZUKIWANIE -->
+                    <div class="searchbar">
+                        <form action="szukaj.html" method="POST" class="search-block">
+                            <label>
+                                <input type="submit" value="search" class="hidden">
+                                <img alt="lupa" src="img/nowe_szukaj.png" class="szukaj-ico">
+                            </label>
+                            <input type="text" placeholder="szukaj" class="hidden">
+                        </form>
+                    </div>
+                    <a href="#" class="zapisane-artykuly-button book"><img alt="książka ikona" src="img/ksiazka-wypelniona.png"></a>
+                </div> <!-- END BLOK WYSZUKIWANIE -->
+                <nav id="mobile-menu-main"  class="main-menu"> <!-- MOBILNE MENU CONTAINER-->
+                    <div class="button-border"> <!-- PRZYCICK DO OTWIERANIA MENU MOBILNEGO -->
+                        <a href="#" class="menu-item">menu</a> 
+                    </div>
+                    <div class="sub-menu">
+                        <div id="sub-mobile-menu-header"> <!-- NAGLOWEK MOBILE MENU-->
+                            <a href="index.html"><img src="img/logo_blogrod.png" class="logo" alt="logo" aria-label="logo"></a>
+                            <div id="mobile-menu-close"><img alt="krzyżyk x" src="img/cross-new.svg"></div>
+                        </div>
+                        <div id="mobile-menu-body">
+                            <div class="first-row">
+                                <div id="mobile-ziolana" class="ziolana">
+                                    <button type="button" class="sub-menu-item">ziola na<span class="style-underline"></span></button>
+                                    <div class="mobile-sub-menu-items">
+                                        <div class="mobile-menu-back"><img alt="strzłka w lewo" src="img/arrow-left.svg"></div>
+                                        <h2  class="sub-menu-title">zioła na</h2>
+                                        <ul>
+                                            <li class="sub-menu-item"><a href="kategoria.html">Odporność i infekcje</a></li>
+                                            <li class="sub-menu-item"><a href="kategoria.html">Adaptogeny</a></li>
+                                            <li class="sub-menu-item"><a href="kategoria.html">Stres, sen, nastrój</a></li>
+                                            <li class="sub-menu-item"><a href="kategoria.html">Pamięć i koncentracja</a></li>
+                                            <li class="sub-menu-item"><a href="kategoria.html">Sport i energia</a></li>
+                                            <li class="sub-menu-item"><a href="kategoria.html">Długowieczność</a></li>
+                                            <li class="sub-menu-item"><a href="kategoria.html">Kobiety</a></li>
+                                            <li class="sub-menu-item"><a href="kategoria.html">Mężczyźni</a></li>
+                                            <li class="sub-menu-item"><a href="kategoria.html">Dzieci</a></li>
+                                            <li class="sub-menu-item"><a href="kategoria.html">Tematy różnorodne</a></li>
+                                            <li class="sub-menu-item"><a href="kategoria.html">Borelioza</a></li>
+                                            <li class="sub-menu-item"><a href="kategoria.html">Inne choroby odkleszczowe</a></li>
+                                            <li class="sub-menu-item"><a href="kategoria.html">Choroby autoimmunologiczne</a></li>
+                                            <li class="sub-menu-item"><a href="kategoria.html">Serce, krążenia i choresterol</a></li>
+                                            <li class="sub-menu-item"><a href="kategoria.html">Cukrzyca</a></li>
+                                            <li class="sub-menu-item"><a href="kategoria.html">Odchudzanie</a></li>
+                                            <li class="sub-menu-item"><a href="kategoria.html">Zdrowe jelita</a></li>
+                                            <li class="sub-menu-item"><a href="kategoria.html">Skóra i włosy</a></li>
+                                            <li class="sub-menu-item"><a href="kategoria.html">Kości i stawy</a></li>
+                                            <li class="sub-menu-item"><a href="kategoria.html">Oczyszczenia</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div id="mobile-zwiedzaj" class="zwiedzaj">
+                                    <button type="button" class="sub-menu-item">zwiedzaj<span class="style-underline"></span></button>
+                                    <div class="mobile-sub-menu-items">
+                                        <div class="mobile-menu-back"><img alt="strzałka w lewo" src="img/arrow-left.svg"></div>
+                                        <h2  class="sub-menu-title">zwiedzaj</h2>
+                                        <ul>
+                                            <li class="sub-menu-item"><a href="kategoria.html">aromaterapia</a></li>
+                                            <li class="sub-menu-item"><a href="kategoria.html">polaczenie</a></li>
+                                            <li class="sub-menu-item"><a href="kategoria.html">receptury DIY</a></li>
+                                            <li class="sub-menu-item"><a href="kategoria.html">ziołowe rytułały</a></li>
+                                            <li class="sub-menu-item"><a href="kategoria.html">ezobotanika</a></li>
+                                            <li class="sub-menu-item"><a href="kategoria.html">zbieranie ziół</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="second-row">
+                                <div class="onas"><a href="#" >o nas</a><span class="style-underline"></span></div>
+                                <img alt="lupa"  src="img/nowe_szukaj.png" class="szukaj-ico">
+                                <a href="#" class="zapisane-artykuly-button book"><img alt="ikona książki" src="img/ksiazka-menu.svg"></a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>  <!-- END MOBILNE MENU CONTAINER-->
+            </div>
+        </div> <!-- END MENU MOBILNE do 768px -->
+
+        <div id="desktop-menu" class="container"> <!-- MENU DESKTOP od 769px -->
+            <a href="index.html"><img alt="logo blogród"  src="img/logo_blogrod.png" class="logo"></a>
+            <div class="searchbar">
+                <form action="szukaj.html" method="POST" class="search-block">
+                    <input type="text" placeholder="szukaj">
+                    <label>
+                        <input type="submit" value="search" class="hidden"><img alt="lupa" src="img/nowe_szukaj.png">
+                    </label>
+                </form>
+            </div>
+            <nav class="main-menu">
+                <div id="ziolana" class="menu-cont">
+                    <a href="#" class="menu-item">zioła na <img alt="strzałka w dół" src="img/arrow-down.svg" class="menu-arrow"></a>
+                </div>
+                <div id="zwiedzaj" class="menu-cont">
+                    <a href="#" class="menu-item">zwiedzaj <img alt="strzałka w dół" src="img/arrow-down.svg" class="menu-arrow"></a>
+                </div>
+                <a href="#" class="menu-item">o nas</a>
+            </nav>
+            <a href="#" class="zapisane-artykuly-button book"><img alt="ikona książki" src="img/ksiazka-wypelniona.png"></a>
+           
+            <div class="sub-menu ziolana"> <!-- SUB MENU OTWIERANE - ZIOLANA -->
+                <div class="three-columns container">
+                    <div class="col c-no1"> <!-- KOLUMNA PIERWSZA I DRUGA-->
+                        <ul> <!-- BLOK SPIS KATEGORII -->
+                            <li class="sub-menu-item"><a href="kategoria.html">Odporność i infekcje</a></li> <!-- ITEM KATEGRIA -->
+                            <li class="sub-menu-item"><a href="kategoria.html">Adaptogeny</a></li>
+                            <li class="sub-menu-item"><a href="kategoria.html">Stres, sen, nastrój</a></li>
+                            <li class="sub-menu-item"><a href="kategoria.html">Pamięć i koncentracja</a></li>
+                            <li class="sub-menu-item"><a href="kategoria.html">Sport i energia</a></li>
+                            <li class="sub-menu-item"><a href="kategoria.html">Długowieczność</a></li>
+                            <li class="sub-menu-item"><a href="kategoria.html">Kobiety</a></li>
+                            <li class="sub-menu-item"><a href="kategoria.html">Mężczyźni</a></li>
+                            <li class="sub-menu-item"><a href="kategoria.html">Dzieci</a></li>
+                            <li class="sub-menu-item"><a href="kategoria.html">Tematy różnorodne</a></li>
+                            <li class="sub-menu-item"><a href="kategoria.html">Borelioza</a></li>
+                            <li class="sub-menu-item"><a href="kategoria.html">Inne choroby odkleszczowe</a></li>
+                            <li class="sub-menu-item"><a href="kategoria.html">Choroby autoimmunologiczne</a></li>
+                            <li class="sub-menu-item"><a href="kategoria.html">Serce, krążenia i choresterol</a></li>
+                            <li class="sub-menu-item"><a href="kategoria.html">Cukrzyca</a></li>
+                            <li class="sub-menu-item"><a href="kategoria.html">Odchudzanie</a></li>
+                            <li class="sub-menu-item"><a href="kategoria.html">Zdrowe jelita</a></li>
+                            <li class="sub-menu-item"><a href="kategoria.html">Skóra i włosy</a></li>
+                            <li class="sub-menu-item"><a href="kategoria.html">Kości i stawy</a></li>
+                            <li class="sub-menu-item"><a href="kategoria.html">Oczyszczenia</a></li>
+                        </ul><!-- END BLOK SPIS KATEGORII -->
+                    </div>
+                    <div class="col c-no3"> <!-- KOLUMNA TRZECIA -->
+                        <div id="adaptogeny" class="submenu-opis"> <!-- OPIS DO KATEGORII SUB MENU-->
+                            <p>To grupa ziół 'adaptująca' do trudnych lub zmiennych warunków środowiska. Są uznane za jedne z najpotrzebniejszych współczesnym ludziom ziół. Tutaj znajdziesz o nich wszystko.</p>
+                            <img alt="gałązka" class="patyczkostrzalka" src="img/arrow-new.png">
+                        </div> <!-- END OPIS KATEGORII -->
+                    </div>
+                </div>
+                <div class="menu-foter">
+                    <a href="kategoria.html">zobacz wszystkie artykuly<span class="style-underline"></span></a>
+                </div>
+            </div> <!-- END SUB MENU OTWIERANE - ZIOLANA -->
+            <div class="sub-menu zwiedzaj">
+                <div class="twoo-columns">
+                    <div class="col c-no1">
+                        <ul>
+                            <li class="sub-menu-item"><a href="kategoria.html">aromaterapia</a></li>
+                            <li class="sub-menu-item"><a href="kategoria.html">polaczenie</a></li>
+                            <li class="sub-menu-item"><a href="kategoria.html">receptury DIY</a></li>
+                            <li class="sub-menu-item"><a href="kategoria.html">ziołowe rytułały</a></li>
+                            <li class="sub-menu-item"><a href="kategoria.html">ezobotanika</a></li>
+                            <li class="sub-menu-item"><a href="kategoria.html">zbieranie ziół</a></li>
+                        </ul>
+                    </div>
+                    <div class="col c-no2">
+                        <div id="aromaterapia" class="submenu-opis">
+                            <p>Przyglądamy się tradycyjnemu oraz klinicznemu zastosowaniu olejków eterycznych. Zajrzyj do pachnącej apteki Matki Ziemi i podążaj za zmysłem węchu.</p>
+                            <img alt="gałązka"  class="patyczkostrzalka" src="img/arrow-new.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-foter">
+                    <a href="#">zobacz wszystkie artykuły<span class="style-underline"></span></a>
+                </div>
+            </div>
+        </div><!-- END MENU DESKTOP od 769px -->
+        
+        <div id="zapisane-artykuly-panel"> <!-- ZAPISANE ARTYKULY -->
+            <div class="zapisane-header"> 
+                <img alt="książka ikona" src="img/ksiazka-wypelnienie-artykul.svg">
+                <h3>zapisane artykuły</h3>
+                <div class="zapisane-close"><img alt="krzyżyk x" src="img/cross-new.svg"></div>
+            </div>  
+            <div class="zapisane-body">
+                <article class="zapisane-blok body-small">
+                    <a href="artykul.html">
+                        <img alt="obrazek wyróżniający" src="database/Rectangle 2720.png">
+                    </a>
+                    <div>
+                        <a class="zapisane-opis">
+                            <h4>Kandydoza cz.1 Czym dokladnie jest i jaki ma wplyw na ludzki organizm.</h4> 
+                        </a>
+                        <button type="button" class="usun">usuń<span class="style-underline"></span></button>
+                    </div>
+                </article>
+                <article  class="zapisane-blok body-small">
+                    <a href="artykul.html">
+                        <img alt="obrazek wyróżniający" src="database/Rectangle 2721.png">
+                    </a>
+                    <div> 
+                        <a class="zapisane-opis">
+                            <h4>Mg2+ magnez: niezbędnik użytkownika</h4> 
+                        </a>
+                        <button type="button" class="usun">usuń<span class="style-underline"></span></button>
+                    </div>
+                </article>
+                <article class="zapisane-blok body-small">
+                    <a href="artykul.html">
+                        <img alt="obrazek wyróżniający" src="database/Rectangle 2722.png">
+                    </a>
+                    <div>
+                        <a class="zapisane-opis">
+                            <h4>Mg2+ magnez</h4> 
+                        </a>
+                        <button type="button" class="usun">usuń<span class="style-underline"></span></button>
+                    </div>
+                </article>
+                <article class="zapisane-blok body-small">
+                    <a href="artykul.html">
+                        <img alt="obrazek wyróżniający" src="database/Rectangle 2723.png">
+                    </a>
+                    <div>
+                        <a class="zapisane-opis">
+                            <h4>Kandydoza cz.2 Czym nie karmić.</h4> 
+                        </a>
+                      <button type="button" class="usun">usuń<span class="style-underline"></span></button>
+                    </div>
+                </article>
+                <article class="zapisane-blok body-small">
+                    <a href="artykul.html">
+                        <img alt="obrazek wyróżniający" src="database/Rectangle 2720.png">
+                    </a>
+                    <div>
+                        <a class="zapisane-opis" href="#">                        
+                            <h4>Kandydoza cz.1 Czym dokladnie jest i jaki ma wplyw na ludzki organizm.</h4> 
+                        </a>
+                        <button type="button" class="usun">usuń<span class="style-underline"></span></button>    
+                    </div>
+                </article>
+                <article  class="zapisane-blok body-small">
+                    <a href="artykul.html">
+                        <img alt="obrazek wyróżniający" src="database/Rectangle 2721.png">
+                    </a>
+                    <div>
+                        <a class="zapisane-opis">
+                            <h4>Mg2+ magnez: niezbędnik użytkownika</h4> 
+                        </a>
+                        <button type="button" class="usun">usuń<span class="style-underline"></span></button>
+                    </div>
+                </article>
+                <article class="zapisane-blok body-small">
+                    <a href="artykul.html">
+                        <img alt="obrazek wyróżniający" src="database/Rectangle 2722.png">
+                    </a>
+                    <div>
+                        <a class="zapisane-opis">
+                            <h4>Mg2+ magnez</h4> 
+                        </a>
+                        <button type="button" class="usun">usuń<span class="style-underline"></span></button>
+                    </div>
+                </article>
+                <article class="zapisane-blok body-small">     
+                    <a href="artykul.html">
+                        <img alt="obrazek wyróżniający" src="database/Rectangle 2723.png">
+                    </a>
+                    <div>
+                        <a class="zapisane-opis">
+                            <h4>Kandydoza cz.2 Czym nie karmić.</h4> 
+                        </a>
+                        <button type="button" class="usun">usuń<span class="style-underline"></span></button>
+                    </div>               
+                </article>
+                <div class="empty-space-margin"></div>    
+            </div>
+        </div> <!-- END ZAPISANE ARTYKULY -->
+    </div>  <!-- END PASEK NAWIGACJI -->
+    <div class="drkener-back_popup" ></div> <!-- SCIEMNIACZ TŁA -->
+    <main>
+
+        
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="four-columns footer_innerwidth">
+                <div class="col napiszdonas">
+                    <h5>napisz do nas</h5>
+                    <p class="flex-group"><svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.12656 17.8485C3.7599 17.8485 3.45043 17.7224 3.19816 17.4701C2.94626 17.2182 2.82031 16.9165 2.82031 16.5648V6.43604C2.82031 6.08441 2.94626 5.78264 3.19816 5.53074C3.45043 5.27848 3.7599 5.15234 4.12656 5.15234H17.8766C18.2432 5.15234 18.5527 5.27848 18.805 5.53074C19.0569 5.78264 19.1828 6.08441 19.1828 6.43604V16.5648C19.1828 16.9165 19.0569 17.2182 18.805 17.4701C18.5527 17.7224 18.2432 17.8485 17.8766 17.8485H4.12656ZM11.0016 11.4086L18.4497 6.48169L18.1516 5.88604L11.0016 10.561L3.85156 5.88604L3.55346 6.48169L11.0016 11.4086Z" fill="black"/>
+                        </svg>
+                        <a href="mailto:ziola@blogrod.pl">ziola@blogrod.pl</a></p>
+                </div>
+                <div class="col odwiedznas">
+                    <h5>odwiedź nas</h5>
+                    <p class="underline-container"><a href="https://www.magicznyogrod.pl/" target="_blank" class="">Magiczny&nbsp;Ogród&nbsp;sklep<span class="style-underline"></span></a></p>
+                    <p>&nbsp;</p>
+                    <p>ul. Pilska 24</p>
+                    <p>77-400 Błękwit</p>
+                    <p>Złotów</p>
+                </div> 
+                <div class="col dowiedzsie">
+                    <h5>dowiedz się więcej</h5>
+                    <p><a href="#" target="_blank">MagLab</a></p>
+                    <p><a href="#" target="_blank">Wiśniewska</a></p>
+                    <p><a href="#" target="_blank">Labirynt Gai</a></p>
+                    <p><a href="#" target="_blank">Autorzy</a></p>
+                </div>
+                <div class="col media">
+                    <h5>media</h5>
+                    <p class="flex-group"><img src="img/instagram.png"><a href="#" target="_blank">Instagram</a></p>
+                    <p class="flex-group"><img src="img/Youtube.png"><a href="#" target="_blank">Youtube</a></p>
+                    <p class="flex-group"><img src="img/facebook.png"><a href="#" target="_blank">Facebook</a></p>
+                </div>
+            </div>    
+            <div class="projektautors footer_innerwidth">
+                <p>projekt: Joanna Kurowska, Masha Animasha</p>
+            </div>
+            <div class="logotypy footer_innerwidth">
+                <a href="#" ><img alt="logo Magiczny Ogród" src="img/logo-magicznyogorod.svg"></a>
+            </div>
+        </div>
+        <div class="ziolawtle">
+                <img src="img/footer_ziele.png" class="ziololeft">
+                <img src="img/Footercenter.png" class="center">
+                <img src="img/KARBIENIEC.png" class="zioloright">
+        </div>
+        <!-- <div class="empty-space-margin"></div> -->
+    </footer>
+</body>
+</html>
