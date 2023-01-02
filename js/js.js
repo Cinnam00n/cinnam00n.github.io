@@ -88,9 +88,9 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 
-  var subMenuItems = document.querySelectorAll(".sub-menu-item > a"),
+  var subMenuItems = document.querySelectorAll("li.sub-menu-item"),
       subMenuOpis = document.querySelectorAll(".submenu-opis"),
-      delayInMilliseconds = 30;
+      delayInMilliseconds = 4;
 
     subMenuItems.forEach(subMenuItem => {
       subMenuItem.addEventListener('mouseover', function subHoverIn(event) { 

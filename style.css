@@ -56,7 +56,7 @@ body{
     color: var(--body1);
 }
 main{
-    padding: 11rem 0rem 1rem;
+    padding: 11rem 0 0;
     overflow: hidden;
 }
 h1, h2, h3, h4, h5, h6{
@@ -247,6 +247,7 @@ input:active {
     width: calc(100% + 2rem);
     margin-left: -1rem;
 }
+
 /* navbar navigation */
 
 #navi-strip{
@@ -293,7 +294,7 @@ input:active {
     height: 1.5em;
 }
 .searchbar img {
-    width: 1.5em;
+    width: 1.7rem;
     cursor: pointer;
     margin-left: 8px;
 }
@@ -417,7 +418,7 @@ a.book:hover img{
     align-content: center;
     justify-content: space-around;
     align-items: center;
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 .twoo-columns {
     display: flex;
@@ -429,7 +430,7 @@ a.book:hover img{
     align-items: center;
     text-align: left;
     margin-top: 4rem;
-    margin-left: -9rem;
+    margin-left: -3.8rem;
 }
 .twoo-columns .col.c-no1 {
     width: 22%;
@@ -479,18 +480,36 @@ a.book:hover img{
     padding-inline-start: 0;
     padding: 0.15em 0;
 }
+
+.ruchoma_strzlka,
+.patyczkostrzalka{
+    position: relative;
+    transition: left 0s ease 0s;
+    left: -50px;
+}
 .patyczkostrzalka{
    margin-top: 28px;
-   position: relative;
-   transition: left 0s ease 0s;
-   left: -50px;
 }
+.textblock-item:hover .ruchoma_strzlka,
+a:hover .ruchoma_strzlka{
+    left: 0;
+    transition: left 0.3s ease 0s;
+}
+.czytajdalej .ruchoma_strzlka{
+    visibility: hidden;
+}
+.czytajdalej a:hover .ruchoma_strzlka{
+    visibility: visible;
+}
+.submenu-opis p{
+    position: relative;
+    transition: left 0s ease 0s;
+    left: -100%; 
+}
+.submenu-opis.active p,
 .submenu-opis.active .patyczkostrzalka{
     left: 0;
     transition: left 0.3s ease 0.3s;
-}
-.zwiedzaj .twoo-columns ul li {
-    margin-left: 16%;
 }
 .sub-menu.ziolana .c-no3,
 .sub-menu.zwiedzaj .c-no2{
@@ -830,6 +849,7 @@ button.usun:hover .style-underline{
     font-size: 1.8rem;
     margin-top: 0.2em;
     margin-bottom: 0.2em;
+    line-height: 1.2;
 }
 img.baner-item{
     animation-name: wiaterek;
@@ -898,8 +918,8 @@ img.baner_img-11.baner-item {
     transform: scale(0.9);
 }
 img.baner_img-08.baner-item {
-    left: -50%;
-    bottom: 52%;
+    left: -52%;
+    bottom: 48%;
     animation-name: wiaterek3;
     animation-duration: 3.4s;
     animation-direction: alternate-reverse;
@@ -970,7 +990,7 @@ img.baner_img-10.baner-item {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(6, 175px);
-    gap: 36px;
+    gap: 52px;
     margin-top: 2rem;
 }
 .item-a {
@@ -1037,7 +1057,7 @@ img.baner_img-10.baner-item {
     color: #D78812;
 }
 .txtimg-container {
-    max-width: calc(100% - 8rem);
+    /* max-width: calc(100% - 8rem); */
     margin: auto;
 }
 .imgblock{
@@ -1046,8 +1066,12 @@ img.baner_img-10.baner-item {
     align-items: center;
     justify-content: center;
     margin-top: 4rem;
-    width: 100%;
+    /* width: 100%; */
 }
+.txtimg-container > div {
+    padding: 0 2rem;
+}
+.textblock_title,
 .proponowany .textblock h3{
     font-size: 2rem;
     line-height: 1.1;
@@ -1079,7 +1103,7 @@ img.baner_img-10.baner-item {
     max-width: 100%;
 }
 .home .container .artykuly-proponowane{
-    margin: 2rem auto;
+    margin: 6.5rem auto 2rem;
     padding: 0
 }
 .home .artgrid{
@@ -1091,21 +1115,23 @@ section.proponowane-lista,
     margin: 0;
     padding: 0;
 }
-.proponowane-lista .txtimg-container{
-    max-width: 100%;
-}
 .proponowane-lista .imgblock > img {
-    width: 100%;
+    min-width: 100%;
+    min-height: 100%;
     object-fit: cover;
 }
 .proponowane-lista .imgblock{
+    align-self: stretch;
     position: relative;
     max-height: 100%;
+    min-height: 100%;
     overflow: hidden;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .gradientfilter{
     display: flex;
-    position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
@@ -1123,6 +1149,10 @@ section.proponowane-lista,
     justify-content: flex-end;
     align-items: flex-start;
     align-content: flex-start;
+    padding-top: 5rem;
+}
+.gradientfilter button.zapisz_artykul {
+    margin-bottom: 4rem;
 }
 .gradientfilter h3,
 .gradientfilter a,
@@ -1130,8 +1160,9 @@ section.proponowane-lista,
     color: var(--backgroundcolor);
 }
 .proponowane-lista .gradientfilter .textblock {
-    max-width: 75%;
+    max-width: 90%;
     margin-bottom: 3rem;
+    padding-left: 2rem;
 }
 .proponowane-lista .tag-list {
     margin-top: 1rem;
@@ -1142,8 +1173,13 @@ section.proponowane-lista,
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    align-content: flex-start;
-    margin-right: 5rem;
+    margin-right: 5.95rem;
+    padding-top: 4.5rem;
+    padding-bottom: 2rem;
+}
+.textblock-content a{
+    position: relative;
+    overflow: hidden;
 }
 .proponowane-lista .textblock-header{
     display: flex;
@@ -1156,6 +1192,8 @@ section.proponowane-lista,
     color: var(--body2);
 }
 .textblock-item{
+    position: relative;
+    overflow: hidden;
     margin-bottom: 2rem;
 }
 h3.title,
@@ -1206,7 +1244,7 @@ h3.title,
     border-width: 1px;
 }
 .yellow.button:hover{
-    background-color: var(--secondarycolor);
+    background-color: #FFD702;
 }
 /*
  ** ARTYKUŁ
@@ -1252,6 +1290,8 @@ h1.article-title {
     min-width: 24px;
     height: 23px;
     margin-bottom: 1.8rem;
+    filter: contrast(1);
+    transition: filter 0.3s ease;
 }
 .proponowane-lista .zapisz_artykul{
     background-image: url(img/ksiazka-artykul-biel.svg);
@@ -1268,6 +1308,9 @@ h1.article-title {
     bottom: 1rem;
     right: 0;
     z-index: 21;
+}
+button.zapisz_artykul:hover{
+    filter: contrast(1.5);
 }
 .artgrid-tagi {
     max-width: calc(100% - 2rem);
@@ -1300,10 +1343,16 @@ p.article-zajawka{
     color: var(--primaryvarcolor);
     border: 1px solid var(--primaryvarcolor);
     border-radius: 2em;
-    padding: 0.5em 1em;
+    padding: 0.745em 1em;
     line-height: 3;
     line-break: strict;
     white-space: nowrap;
+}
+.gradientfilter a.tag-item {
+    border: 1px solid var(--backgroundcolor);
+}
+a.tag-item {
+    padding: 0.5em 1em;
 }
 .tag_button{
     line-height: 1;
@@ -1322,6 +1371,7 @@ p.article-zajawka{
 .article-chapter:first-child {
     margin-top: 3rem;
 }
+
 .article-spis h3{
     font-family: "proxima-nova", sans-serif;
     margin-left: 0;
@@ -1514,7 +1564,6 @@ ol {
 .article-footer_item.expanded {
     max-height: 40rem;
 }
-
 .article-footer_item h3{
     font-family: 'Ogg-Bold', serif;
     line-height: 2;
@@ -1524,8 +1573,13 @@ ol {
     margin: 0;
     padding: 0 2rem 0;
 }
+.article-footer_item .inne_artykuly,
+.article-footer_item h4{
+    margin-top: 2.375rem;
+}
 .article-footer_item p{
     font-size: 0.8rem;
+    margin-bottom: 1em;
 }
 .article-footer_navi button {
     width: 2rem;
@@ -1568,6 +1622,17 @@ ol {
     font-size: 0.8125rem;
     line-height: 1.13rem;
 }
+.autor_img-container{
+    width: 79px;
+    height: 79px;
+    border-radius: 40px;
+    overflow: hidden;
+}
+img.autor_img {
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+}
 
 /* KATEGORIA */
 
@@ -1606,7 +1671,8 @@ img.kat-header_img {
 .horizontal img {
     object-fit: cover;
 }
-.vertical img {
+.vertical img,
+.vertical .artgrid-img_cont {
     height: 400px;
     max-height: 400px;
 } 
@@ -1648,6 +1714,8 @@ article.artgrid-item{
 }
 .artgrid-title{
     font-size: 1rem;
+    color: #000;
+    font-weight: 600;
 }
 .artgrid-zajawka p{
     font-size: 0.8125rem
@@ -1678,7 +1746,7 @@ section.artykuly-proponowane {
     margin-top: 5.5em;
 }
 section.artykuly-proponowane:nth-child(2) {
-    margin-top: 20rem;
+    margin-top: 12.375rem;
 }
 .zobacz_wiecej_header{
     display: inline-flex;
@@ -1687,10 +1755,12 @@ section.artykuly-proponowane:nth-child(2) {
     align-content: center;
     justify-content: flex-start;
     align-items: center;
+    margin-bottom: 3.25rem;
 }
 .zobacz_wiecej_header h3 {
     margin-right: 1rem;
     display: inline-block;
+    font-weight: 600;
 }
 .zobacz_wiecej_header .tag_button {
     margin-top: 0;
@@ -1824,9 +1894,6 @@ footer a:hover .style-underline{
     footer .underline-container{
         max-width: fit-content;
     }
-    .txtimg-container > div >div {
-        padding: 2rem;
-    }
     .home .container section.proponowane-lista.txtimg-block, 
     section.proponowane-lista {
         margin-left: -1rem;
@@ -1915,7 +1982,7 @@ footer a:hover .style-underline{
         flex-direction: row;
         flex-wrap: wrap;
         align-content: flex-start;
-        justify-content: center;
+        justify-content: space-between;
     }
     .newsletter-container {
         max-width: 500px;
@@ -1936,6 +2003,14 @@ footer a:hover .style-underline{
     }
     footer .logotypy {
         margin: 2rem 15rem 0 auto;
+    }
+    .proponowany  .textblock-content{
+        max-width: 570px;
+        margin: auto;
+    }
+    .proponowane-lista .textblock-content {
+        max-width: 410px;
+        margin-left: 8rem;
     }
 }
 @media screen and (min-width: 768px) {
@@ -1967,18 +2042,21 @@ footer a:hover .style-underline{
         margin-top: 0.75em;
         margin-left: 0em;
     }
+    .sub-menu {
+        padding-top: 4rem;
+    }
     .sub-menu .container {
         background-image: url(img/submenu-ziolana.png);
         background-position: 92% 48%;
         background-repeat: no-repeat;
         width: calc(100vw - 4em);
         max-height: fit-content;
-        padding: 6rem 2rem 4rem;
+        padding: 3rem 2rem 4rem;
     }
     .sub-menu.zwiedzaj .twoo-columns {
         display: flex!important;
         background-image: url(img/submenu-zwiedzaj.png);
-        background-position: 84% 70%;
+        background-position: 90% 130%;
         background-repeat: no-repeat;
     }
     .sub-menu ul {
@@ -2057,17 +2135,17 @@ footer a:hover .style-underline{
     }
     .baner{
         margin-left: 0;
-     }
-     .baner .cont{
+    }
+    .baner .cont{
         width: 100%;
         margin: auto;
         position: relative;
         min-height: calc(470px + 11rem);
-     }
-     .baner h1 {
+    }
+    .baner h1 {
         font-size: 20vw;
-     }
-     img.baner-item{
+    }
+    img.baner-item{
         transform: scale(1);
     }
     img.baner_img-01.baner-item {
@@ -2158,8 +2236,16 @@ footer a:hover .style-underline{
         padding: 4rem 0;
         font-size: 0.8125rem;
     }
+    main > section {
+        padding: 0 2rem;
+    }
 }
 
+@media screen and (min-width: 816px) {
+    .grid-najnowsze .grid-najnowsze-item {
+        max-width: calc(33% - 36px);
+    }
+}
 @media screen and (min-width: 1024px) {
     .sub-menu li a{
         font-weight: 400;
@@ -2178,7 +2264,7 @@ footer a:hover .style-underline{
         gap: 0 4em;
     }
     .sub-menu.ziolana .c-no3 {
-        width: 29vw;
+        width: 28%;
     }
     #navi-strip .ziolana div.three-columns.container {
         justify-content: space-around;
@@ -2189,6 +2275,8 @@ footer a:hover .style-underline{
     }
     .twoo-columns .col.c-no2 {
         width: 26%;
+        margin-left: 3rem;
+        margin-top: 1rem;
     }
     #desktop-menu nav a.menu-item{
         padding-right: 2rem;
@@ -2296,13 +2384,16 @@ footer a:hover .style-underline{
     }
     .txtimg-container > div {
         max-width: 50%;
-        padding: 2rem;
+        min-width: 50%;
+    }
+    .proponowane-lista .gradientfilter .textblock {
+        padding-left: 6rem;
     }
     .textblock{
         max-width: calc(50% - 8rem);
     }
-    .textblock-content{
-        margin-left: 4rem;
+    .txtimg-container > .textblock > .textblock-content{
+        margin-left: 8.5rem;
     }
     .imgblock {
         display: flex;
@@ -2313,6 +2404,13 @@ footer a:hover .style-underline{
     }
     .czytajdalej {
         margin-left: 5rem;
+    }
+    .txtimg-container > div {
+        padding: 0;
+    }
+    .proponowane-lista .textblock-content {
+        max-width: 90%;
+        margin-left: 0rem;
     }
 }
 
@@ -2326,7 +2424,7 @@ footer a:hover .style-underline{
     }
     .sub-menu.ziolana .c-no3 {
         padding-right: 4em;
-        width: 23%;
+        width: 26%;
         margin-left: -18rem;
     }
     .sub-menu ul {
@@ -2339,9 +2437,9 @@ footer a:hover .style-underline{
         max-width: 1200px;
     }
     article.artgrid-item {
-        min-width: calc(25% - 2rem);
-        max-width: calc(25% - 2rem);
-        padding: 0 1rem;
+        min-width: calc(25% - 3.25rem);
+        max-width: calc(25% - 3.25rem);
+        padding: 0 1.625rem;
     }
     .proponowane-male{
         display: block;
@@ -2353,7 +2451,7 @@ footer a:hover .style-underline{
     .proponowane-male .zobacz_wiecej_header{
         display: block;
     }
-    .poponowane_item{
+    .proponowane_item{
         display: flex;
         flex-wrap: nowrap;
         align-content: center;
@@ -2361,6 +2459,16 @@ footer a:hover .style-underline{
         align-items: center;
         background-color: var(--ramka);
         margin: 1rem auto;
+    }
+    .proponowane_item:hover{
+        background-color: var(--primarycolor);
+    }
+    .proponowane_item:hover button.artgrid-ksiazka:hover{
+        background-image: url(img/ksiazka-artykul-biel.svg);
+    }
+    .proponowane_item:hover a,
+    .proponowane_item a:hover{
+        color: var(--primaryvarcolor);
     }
     .masonry-content {
         overflow: hidden;
@@ -2386,7 +2494,7 @@ footer a:hover .style-underline{
     }
     img.baner_img-01.baner-item {
         bottom: 10%;
-        right: 0;
+        right: -1%;
         display: block;
     }
     img.baner_img-02.baner-item {
@@ -2400,7 +2508,7 @@ footer a:hover .style-underline{
     }
     img.baner_img-14.baner-item {
         bottom: -4%;
-        right: 0;
+        right: -2%;
     }
     img.baner_img-05.baner-item {
         bottom: 28%;
@@ -2413,7 +2521,7 @@ footer a:hover .style-underline{
     }
     img.baner_img-12.baner-item {
         bottom: 35%;
-        right: 0;
+        right: -1%;
         display: block;
     }
     img.baner_img-11.baner-item {
@@ -2444,11 +2552,11 @@ footer a:hover .style-underline{
         max-width: calc(850px + 2rem);
     }
     .home .artykuly-proponowane, .home .artgrid-container {
-        max-width: 1247px;
+        max-width: calc(1247px + 3.25rem);
     }
     .artykuly-proponowane .artgrid-container {
-        margin-left: -1rem;
-        margin-right: -1rem;
+        margin-left: -1.625rem;
+        margin-right: -1.625rem;
     }
 
 }
@@ -2459,11 +2567,6 @@ footer a:hover .style-underline{
     }
     .newsletter-block {
         background-position: 4vw -34px, 112% 193%;
-    }
-    .grid-item .content {
-        padding-left: 1rem;
-        padding-right: 1rem;
-        padding-bottom: 1rem;
     }
     .proponowane-male {
         right: -48%;
