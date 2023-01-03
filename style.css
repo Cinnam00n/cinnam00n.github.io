@@ -490,7 +490,7 @@ a.book:hover img{
 .patyczkostrzalka{
    margin-top: 28px;
 }
-.textblock-item:hover .ruchoma_strzlka,
+.home .textblock-item:hover .ruchoma_strzlka,
 a:hover .ruchoma_strzlka{
     left: 0;
     transition: left 0.3s ease 0s;
@@ -1049,6 +1049,12 @@ img.baner_img-10.baner-item {
 .primgreen{
     background-color: var(--primarycolor);
 }
+.ramka_color{
+    background-color: var(--ramka);
+}
+.bezbarwne{
+    background-color: transparent;
+}
 .proponowane-lista h3 span.subtitlecolor,
 .greygreen h3 span.subtitlecolor{
     color: #B36D71;
@@ -1057,7 +1063,6 @@ img.baner_img-10.baner-item {
     color: #D78812;
 }
 .txtimg-container {
-    /* max-width: calc(100% - 8rem); */
     margin: auto;
 }
 .imgblock{
@@ -1066,7 +1071,6 @@ img.baner_img-10.baner-item {
     align-items: center;
     justify-content: center;
     margin-top: 4rem;
-    /* width: 100%; */
 }
 .txtimg-container > div {
     padding: 0 2rem;
@@ -1091,12 +1095,27 @@ img.baner_img-10.baner-item {
 }
 .czytajdalej img{
     margin-left: 1rem;
+    object-fit: contain;
 }
 .czytajdalej a:hover{
     color: var(--body1)
 }
 .czytajdalej a:hover .style-underline{
     transform: translate3d(-31%, 0px, 0px);
+}
+.bezbarwne{
+    margin-top: 6.125rem;
+    margin-bottom: 6.125rem;
+}
+.bigtitle h2{
+    font-family: "ogg-bold", sans-serif;
+    font-size: 4.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.onas .czytajdalej {
+    margin-left: 0;
+    margin-top: 3.5rem;
 }
 .home .artykuly-proponowane, 
 .home .artgrid-container {
@@ -1245,6 +1264,39 @@ h3.title,
 }
 .yellow.button:hover{
     background-color: #FFD702;
+}
+
+/*
+* O NAS
+*/
+.onas .textblock-item{
+    max-width: 100%;
+}
+h3.title{
+    font-size: 2rem;
+}
+.onas .imgblock img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.onas .txtimg-block {
+    padding: 0;
+}
+.onas .imgblock{
+    padding: 0;
+    min-height: 100%;
+    justify-self: stretch;
+    align-self: stretch;
+}
+.onas .textblock-content{
+    padding-top: 2rem;
+}
+.onas main {
+    padding: 9.625rem 0 0;
+}
+.onas .textblock-header{
+    margin-bottom: 2rem;
 }
 /*
  ** ARTYKUŁ
@@ -1755,7 +1807,7 @@ section.artykuly-proponowane:nth-child(2) {
     align-content: center;
     justify-content: flex-start;
     align-items: center;
-    margin-bottom: 3.25rem;
+    margin-bottom: 2.45rem;
 }
 .zobacz_wiecej_header h3 {
     margin-right: 1rem;
@@ -2382,9 +2434,18 @@ footer a:hover .style-underline{
         align-items: center;
         flex-wrap: nowrap;
     }
+    .onas .txtimg-container {
+        align-items: flex-end;
+    }
     .txtimg-container > div {
         max-width: 50%;
         min-width: 50%;
+    }
+    .onas .txtimg-container {
+        justify-content: space-between;
+    }
+    .onas .txtimg-container > div {
+        min-width: auto;
     }
     .proponowane-lista .gradientfilter .textblock {
         padding-left: 6rem;
@@ -2395,6 +2456,14 @@ footer a:hover .style-underline{
     .txtimg-container > .textblock > .textblock-content{
         margin-left: 8.5rem;
     }
+    .onas .txtimg-container > .textblock > .textblock-content{
+        margin-left: 6.25rem;
+        padding-right: 4.5rem;
+    }
+    .onas .txtimg-container > .textblock > .textblock-content.rightsite{
+        margin-left: 2.25rem;
+        padding-right: 9.5rem;
+    } 
     .imgblock {
         display: flex;
         align-content: center;
@@ -2411,6 +2480,9 @@ footer a:hover .style-underline{
     .proponowane-lista .textblock-content {
         max-width: 90%;
         margin-left: 0rem;
+    }
+    .onas .textblock{
+        padding-bottom: 5.81rem;
     }
 }
 
@@ -2432,9 +2504,6 @@ footer a:hover .style-underline{
     }
     .three-columns .c-no1 {
         width: 50%;
-    }
-    .artgrid-container{
-        max-width: 1200px;
     }
     article.artgrid-item {
         min-width: calc(25% - 3.25rem);
@@ -2551,7 +2620,9 @@ footer a:hover .style-underline{
     .four-columns {
         max-width: calc(850px + 2rem);
     }
-    .home .artykuly-proponowane, .home .artgrid-container {
+    .artgrid-container,
+    .home .artykuly-proponowane,
+    .bezbarwne .txtimg-container {
         max-width: calc(1247px + 3.25rem);
     }
     .artykuly-proponowane .artgrid-container {
