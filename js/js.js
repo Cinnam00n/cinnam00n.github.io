@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
 ** Nawigacja MENU GŁOWNE (desktop i mobile)
 */    
 
-  const menuItems = document.querySelectorAll("#desktop-menu .main-menu .menu-item"),
+  const menuItems = document.querySelectorAll("#desktop-menu .main-menu .menu-item.rozwijanie"),
       subItems = document.querySelectorAll("#desktop-menu .sub-menu"),
       mobileMenuButon = document.querySelector("#mobile-menu nav > div > .menu-item"),
       mobileMenuClose = document.querySelector("#mobile-menu-close"),
