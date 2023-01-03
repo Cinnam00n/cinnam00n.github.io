@@ -17,7 +17,45 @@ ver: 1.2
     src:  url('fonts/Ogg-Light.woff2') format('woff2'),
           url('fonts/Ogg-Light.woff') format('woff');
   }
-
+ /* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #455D38 #DBE8D2;
+  }
+  
+  /* Chrome, Edge and Safari */
+  *::-webkit-scrollbar {
+    width: 12px;
+    width: 12px;
+  }
+  *::-webkit-scrollbar-track {
+    border-radius: 6px;
+    background-color: #DBE8D2;
+  }
+  
+  *::-webkit-scrollbar-track:hover {
+    background-color: #C7D2BE;
+  }
+  
+  *::-webkit-scrollbar-track:active {
+    background-color: #A1AA9A;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #455D38;
+  }
+  
+  *::-webkit-scrollbar-thumb:hover {
+    background-color: #11170E;
+  }
+  
+  *::-webkit-scrollbar-thumb:active {
+    background-color: #2D3D25;
+  }
+  
+  
+  
 :root{
     --primarycolor: #C7D2BE;
     --primaryvarcolor: #2D3D25;
