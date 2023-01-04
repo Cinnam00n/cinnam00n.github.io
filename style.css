@@ -1376,8 +1376,8 @@ h1.article-title {
     right: 0.5rem;
 }
 .grid-najnowsze .artgrid-ksiazka{
-    right: 12px;
-    top: 10px;
+    right: 8px;
+    top: 8px;
 }
 button.zapisz_artykul:hover{
     filter: contrast(1.5);
