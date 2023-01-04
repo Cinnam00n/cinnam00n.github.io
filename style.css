@@ -1345,7 +1345,7 @@ h1.article-title {
 }
 .zapisz_artykul,
 .artgrid-ksiazka{
-    background-image: url(img/ksiazka-good.svg);
+    background-image: url(img/ksiazka-artykul-biel.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -1368,18 +1368,22 @@ h1.article-title {
     margin-right: 0.5rem;
     background-size: contain;
     position: absolute;
-    bottom: 0.2rem;
-    right: 1rem;
+    top: 0.5rem;
+    right: 2rem;
     z-index: 21;
 }
+.kategoria .artgrid-ksiazka{
+    right: 0.5rem;
+}
 .grid-najnowsze .artgrid-ksiazka{
-    right: 0;
+    right: 12px;
+    top: 10px;
 }
 button.zapisz_artykul:hover{
     filter: contrast(1.5);
 }
 .artgrid-tagi {
-    max-width: calc(100% - 2rem);
+    max-width: 100%;
 }
 .proponowane-male button.artgrid-ksiazka {
     position: initial;
