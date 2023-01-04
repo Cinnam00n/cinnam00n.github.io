@@ -1417,7 +1417,7 @@ p.article-zajawka{
     color: var(--primaryvarcolor);
     border: 1px solid var(--primaryvarcolor);
     border-radius: 2em;
-    padding: 0.745em 1em;
+    padding: 0.5em 1em;
     line-height: 3;
     line-break: strict;
     white-space: nowrap;
@@ -1425,8 +1425,9 @@ p.article-zajawka{
 .gradientfilter a.tag-item {
     border: 1px solid var(--backgroundcolor);
 }
-a.tag-item {
+.zobacz_wiecej_header a.tag-item {
     padding: 0.5em 1em;
+    line-height: 1.5;
 }
 .tag_button{
     line-height: 1;
@@ -1445,7 +1446,9 @@ a.tag-item {
 .article-chapter:first-child {
     margin-top: 3rem;
 }
-
+.article-header_tresc .tag-list a.tag-item{
+    line-height: 3;
+}
 .article-spis h3{
     font-family: "proxima-nova", sans-serif;
     margin-left: 0;
