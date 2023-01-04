@@ -18,7 +18,7 @@
                         <form action="szukaj.html" method="POST" class="search-block">
                             <label>
                                 <input type="submit" value="search" class="hidden">
-                                <img alt="lupa" src="img/nowe_szukaj.png" class="szukaj-ico">
+                                <img alt="lupa" src="img/szukaj_new.png" class="szukaj-ico">
                             </label>
                             <input type="text" placeholder="szukaj" class="hidden">
                         </form>
@@ -83,7 +83,7 @@
                             </div>
                             <div class="second-row">
                                 <div class="onas"><a href="onas.html" >o nas</a><span class="style-underline"></span></div>
-                                <img alt="lupa"  src="img/nowe_szukaj.png" class="szukaj-ico">
+                                <img alt="lupa"  src="img/szukaj_new.png" class="szukaj-ico">
                                 <a href="#" class="zapisane-artykuly-button book"><img alt="ikona książki" src="img/ksiazka-menu.svg"></a>
                             </div>
                         </div>
@@ -98,7 +98,7 @@
                 <form action="szukaj.html" method="POST" class="search-block">
                     <input type="text" placeholder="szukaj">
                     <label>
-                        <input type="submit" value="search" class="hidden"><img alt="lupa" src="img/nowe_szukaj.png">
+                        <input type="submit" value="search" class="hidden"><img alt="lupa" src="img/szukaj_new.png">
                     </label>
                 </form>
             </div>
@@ -282,14 +282,17 @@
                     <input type="text" placeholder="szukaj">
                     <label>
                         <input type="submit" value="search" class="hidden">
-                        <img alt="lupa" src="img/nowe_szukaj.png" class="szukaj-ico">
+                        <img alt="lupa" src="img/szukaj_big.png" class="szukaj-ico">
                     </label>
                 </form>
             </div>
             <div id="search-results">
                 <div class="results-container">
-                    <p>Jeszcze nie napisalismy o tym.</p>
-                    <p><b>Szukaj dalej!</b></p>
+                    <div id="brak_wynikow" class="active">
+                        <p>Jeszcze nie napisalismy o tym.</p>
+                        <p><b>Szukaj dalej!</b></p>
+                    </div>
+
                 </div>
             </div>
        </div>

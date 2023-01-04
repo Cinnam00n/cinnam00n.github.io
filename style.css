@@ -1848,9 +1848,47 @@ h3.title{
 .szukaj #desktop-menu .searchbar{
     visibility: hidden;
 }
-
+main .searchbar{
+    font-size: 1.875rem;
+    text-align: center;
+    margin: auto;
+    position: relative;
+    right: -32px;
+    width: auto;
+    justify-self: center;
+    max-width: 80%;
+}
+main .searchbar form.search-block {
+    align-items: center;
+}
+main .searchbar input[type="text"]{
+    font-family: "Ogg-Light", sans-serif;
+    font-size: 1.875rem;
+    width: 650px;
+    line-height: 1.65;
+    border-bottom: 1px solid var(--body1);
+}
+main .searchbar img{
+    width: auto;
+}
+#brak_wynikow{
+    width: fit-content;
+    margin: auto;
+    text-align: center;
+    display: none;
+    margin-top: 4.75rem;
+    margin-bottom: 4.75rem;
+    font-size: 1.5rem;
+}
+#brak_wynikow.active{
+    display: block;
+}
+#brak_wynikow p{
+    margin: 0;
+    line-height: 1.5;
+}
 /*
-** zobacz wiÄ™cej **
+** zobacz wiecej **
 */
 
 section.artykuly-proponowane {
