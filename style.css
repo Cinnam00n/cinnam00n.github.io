@@ -1343,6 +1343,7 @@ h1.article-title {
     position: relative;
     top: -3px;
 }
+.artgrid-ksiazka2,
 .zapisz_artykul,
 .artgrid-ksiazka{
     background-image: url(img/ksiazka-artykul-biel.svg);
@@ -1355,6 +1356,9 @@ h1.article-title {
     margin-bottom: 1.8rem;
     filter: contrast(1);
     transition: filter 0.3s ease;
+}
+.artgrid-ksiazka2{
+    margin: 0 6px 0 0;
 }
 .proponowane-lista .zapisz_artykul{
     background-image: url(img/ksiazka-artykul-biel.svg);
@@ -1777,6 +1781,7 @@ article.artgrid-item{
     padding: 0 1rem;
 }
 .artgrid-header {
+    width: 100%;
     display: inline-flex;
     align-content: center;
     align-items: center;
