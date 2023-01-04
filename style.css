@@ -547,7 +547,7 @@ a:hover .ruchoma_strzlka{
 .submenu-opis.active p,
 .submenu-opis.active .patyczkostrzalka{
     left: 0;
-    transition: left 0.3s ease 0.3s;
+    transition: left 0.3s ease 0.1s;
 }
 .sub-menu.ziolana .c-no3,
 .sub-menu.zwiedzaj .c-no2{
@@ -561,7 +561,7 @@ a:hover .ruchoma_strzlka{
 }
 .submenu-opis.active{
     opacity: 1;
-    transition: opacity 0.1s ease 0.1s;
+    transition: opacity 0.1s ease 0s;
 }
 #desktop-menu a,
 #desktop-menu nav,
@@ -698,7 +698,10 @@ a:hover .ruchoma_strzlka{
     margin-right: -0.8rem!important;
 }
 
-/* ZAPISANE ARTYKULY */
+/* 
+* ZAPISANE ARTYKULY 
+*/
+
 #zapisane-artykuly-panel{
     display: flex;
     position: fixed;
@@ -840,27 +843,28 @@ button.usun:hover .style-underline{
 /*
  ** srtona glowna HOME
  */
- .baner{
+
+.baner{
     display: block;
     width: 100vw;
     margin: 0;
     background-color: var(--primarycolor);
     margin-top: -11rem;
     margin-left: -1rem;
- }
- .baner .cont{
+}
+.baner .cont{
     width: var(--contwidth);
     margin: auto;
     position: relative;
     min-height: calc(540px + 11rem);
- }
- .baner-item,  
- .baner h1,
- .baner-subtitle{
+}
+.baner-item,  
+.baner h1,
+.baner-subtitle{
     position: absolute;
- }
- .baner h1,
- .baner-subtitle {
+}
+.baner h1,
+.baner-subtitle {
     bottom: 37%;
     left: 50%;
     transform: translate(-50%,0px);
@@ -1261,6 +1265,7 @@ h3.title,
 /*
 ** newletter block
 */
+
 .newsletter-block{
     background-color: var(--primarycolor);
     padding: 9.5rem 1rem 7.5rem;
@@ -1305,39 +1310,7 @@ h3.title,
 }
 
 /*
-* O NAS
-*/
-.onas .textblock-item{
-    max-width: 100%;
-}
-h3.title{
-    font-size: 2rem;
-}
-.onas .imgblock img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-}
-.onas .txtimg-block {
-    padding: 0;
-}
-.onas .imgblock{
-    padding: 0;
-    min-height: 100%;
-    justify-self: stretch;
-    align-self: stretch;
-}
-.onas .textblock-content{
-    padding-top: 2rem;
-}
-.onas main {
-    padding: 9.625rem 0 0;
-}
-.onas .textblock-header{
-    margin-bottom: 2rem;
-}
-/*
- ** ARTYKUŁ
+ ** ARTYKUÅ
  */
 
 .article-header{
@@ -1727,7 +1700,9 @@ img.autor_img {
     object-fit: cover;
 }
 
-/* KATEGORIA */
+/* 
+**  KATEGORIA  **
+*/
 
 .kat-header_cont,
 .kategoria-header{
@@ -1832,7 +1807,50 @@ article.artgrid-item{
 }
 
 /*
-* zobacz więcej
+* O NAS
+*/
+
+.onas .textblock-item{
+    max-width: 100%;
+}
+h3.title{
+    font-size: 2rem;
+}
+.onas .imgblock img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.onas .txtimg-block {
+    padding: 0;
+}
+.onas .imgblock{
+    padding: 0;
+    min-height: 100%;
+    justify-self: stretch;
+    align-self: stretch;
+}
+.onas .textblock-content{
+    padding-top: 2rem;
+}
+.onas main {
+    padding: 9.625rem 0 0;
+}
+.onas .textblock-header{
+    margin-bottom: 2rem;
+}
+
+
+/*
+** SZUKAJ **
+*/
+
+.szukaj #desktop-menu .searchbar{
+    visibility: hidden;
+}
+
+/*
+** zobacz wiÄ™cej **
 */
 
 section.artykuly-proponowane {
@@ -1859,7 +1877,9 @@ section.artykuly-proponowane:nth-child(2) {
     margin-top: 0;
 }
 
-/* FOOTER */
+/* 
+** FOOTER **
+*/
 .flex-group{
     display: flex;
     align-content: center;
