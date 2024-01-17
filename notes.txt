@@ -1,1 +1,3 @@
 npx tailwindcss -i ./style-in.css -o ./style.css --watch
+
+npx tailwindcss -i ./style-in.css -o ./style.css --minify // build version
