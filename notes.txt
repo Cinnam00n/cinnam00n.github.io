@@ -1,1 +1,1 @@
-Try positioning the rows relative to the viewport position, it might fix the layout permamently
+npx tailwindcss -i ./style-in.css -o ./style.css --watch
