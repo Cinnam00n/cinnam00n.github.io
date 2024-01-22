@@ -10,6 +10,7 @@ module.exports = {
       },
       backgroundImage: {
         'baner-horizontal': "url('img/background.jpg')",
+        'baner-vertical': "url('img/baner-vertical.png')"
       },
       height: {
         'box': '10vh'

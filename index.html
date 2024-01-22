@@ -7,58 +7,68 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="style.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Signika:display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Signika&display=swap" rel="stylesheet">
 
 </head>
 
 <body class="text-white font-body">
   <!--BG CONTAINER-->
-  <div class="relative h-screen w-screen bg-baner-horizontal bg-cover bg-center">
-    <!-- LEFT BUTTON + text -->
-    <div class="absolute flex-none inset-y-0 left-10">
-      <div class="flex pt-10 pb-20 px-4 justify-start" >
-        <img src="img/nanga-baner.png" alt="magiczny-ogrod-baner" class="h-[90px] mb-[10px]">
+  <div class="relative h-screen w-screen bg-baner-vertical md:bg-baner-horizontal bg-cover bg-center">
+    <!-- LEFT/TOP BUTTON + text -->
+    <div class="absolute flex-none md:inset-y-0 md:left-10 left-5">
+      <div class="flex md:pt-10 pt-5 md:pb-20 pb-5 px-4 md:justify-start">
+        <img src="img/nanga-baner.png" alt="magiczny-ogrod-baner" class="h-[40px] mb-[5px] md:h-[90px] md:mb-[10px]">
       </div>
-      <form action="https://www.nanga.pl">  
+      <form action="https://www.nanga.pl">
         <button type="submit"
-          class="h-box border-2 border-white rounded-2xl px-5 max-w-sm mx-auto cursor-pointer  bg-darkgreen flex items-center space-x-4 hover:bg-green-800 transition">
+          class="h-box border-2 border-white rounded-2xl px-5 max-w-sm mx-0 cursor-pointer  bg-darkgreen flex items-center space-x-4 hover:bg-green-800 transition">
           <div>
-            <div class="text-3xl font-semibold text-white">Hurtownia Nanga</div>
+            <div class="md:text-3xl text-2xl font-semibold text-white">Hurtownia Nanga</div>
           </div>
         </button>
       </form>
-      <div class="text-2xl py-6 font-medium">
-        <p>Zamówienia tylko</p>
-        <p> hurtowe</p>
+      <div class="md:text-2xl text-xl md:py-6 py-3 font-medium">
+        <p>Zamówienia tylko hurtowe</p>
         <p>(podmioty gospodarcze)</p>
       </div>
+      <div class="md:hidden">
+        <p class="py-1 cursor-pointer hover:text-green-500"><a href="www.nanga.pl">www.nanga.pl</a></p>
+        <p class="py-1 cursor-pointer hover:text-green-500"><a href="mailto:hurt@nanga.pl">hurt@nanga.pl</a></p>
+      </div>
     </div>
-    <!-- RIGHT BUTTON + text -->
-    <div class="absolute flex-none inset-y-0 right-10">
-      <div class="flex pt-10 pb-20 px-4 justify-end">
-        <img src="img/magiczny-ogrod-baner.png" alt="magiczny-ogrod-logo" class="h-[100px] mb-[0px]">
+    <!-- RIGHT/BOTTOM BUTTON + text -->
+    <div class="absolute flex-none md:inset-y-0 md:right-10 md:bottom-auto md:left-auto bottom-9 left-5">
+      <div class="flex pt-1 md:pt-10 md:pb-20 pb-7 md:px-4 md:justify-end">
+        <img src="img/magiczny-ogrod-baner.png" alt="magiczny-ogrod-logo" class="h-[60px] md:h-[100px] md:mb-[0px]">
       </div>
       <form action="https://www.magicznyogrod.pl">
         <button type="submit"
-          class="h-box border-2 border-white rounded-2xl px-5 max-w-sm mx-auto cursor-pointer bg-darkgreen flex items-center space-x-4 hover:bg-green-800 transition">
-          <div>
-            <div class="text-3xl font-semibold text-white">Sklep Detaliczny</div>
+          class="h-box border-2 border-white rounded-2xl px-5 max-w-sm mx-0 cursor-pointer bg-darkgreen flex items-center space-x-4 hover:bg-green-800 transition">
+            <div class="md:text-3xl text-2xl font-semibold text-white">Sklep Detaliczny</div>
         </button>
       </form>
-      <div class="text-2xl py-6">
-        <p class="flex justify-end">Klienci indywidualni</p>
+      <div class="md:text-2xl text-xl md:py-6 py-3 font-medium">
+        <p class="md:flex md:justify-end" >Klienci indywidualni</p>
+      </div>
+      <div class="md:hidden">
+        <p class="py-1 cursor-pointer hover:text-green-500 flex"><a
+          href="www.magicznyogrod.pl">www.magicznyogrod.pl</a></p>
+      <p class="py-1 cursor-pointer hover:text-green-500 flex"><a
+          href="mailto:sklep@magicznyogrod.pl">sklep@magicznyogrod.pl</a></p>
       </div>
     </div>
 
     <!-- RIGHT CONTACT -->
-    <div class="text-2xl absolute flex-none bottom-10 left-10">
+    <div class="md:text-2xl absolute flex-none md:bottom-10 md:left-10 hidden md:block ">
       <p class="py-2 cursor-pointer hover:text-green-500"><a href="www.nanga.pl">www.nanga.pl</a></p>
       <p class="py-2 cursor-pointer hover:text-green-500"><a href="mailto:hurt@nanga.pl">hurt@nanga.pl</a></p>
     </div>
     <!-- LEFT CONTACT-->
-    <div class="text-2xl absolute flex-none bottom-10 right-10">
-      <p class="py-2 cursor-pointer hover:text-green-500 flex justify-end"><a href="www.magicznyogrod.pl">www.magicznyogrod.pl</a></p>
-      <p class="py-2 cursor-pointer hover:text-green-500 flex justify-end"><a href="mailto:sklep@magicznyogrod.pl">sklep@magicznyogrod.pl</a></p>
+    <div class="text-2xl absolute flex-none bottom-10 right-10 hidden md:block">
+      <p class="py-2 cursor-pointer hover:text-green-500 flex justify-end"><a
+          href="www.magicznyogrod.pl">www.magicznyogrod.pl</a></p>
+      <p class="py-2 cursor-pointer hover:text-green-500 flex justify-end"><a
+          href="mailto:sklep@magicznyogrod.pl">sklep@magicznyogrod.pl</a></p>
     </div>
   </div>
   </div>
