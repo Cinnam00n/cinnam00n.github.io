@@ -9,7 +9,7 @@ module.exports = {
         'white': '#FFFAE3'
       },
       backgroundImage: {
-        'baner-horizontal': "url('img/background.jpg')",
+        'baner-horizontal': "url('img/baner-horizontal.jpg')",
         'baner-vertical': "url('img/baner-vertical.png')"
       },
       height: {
